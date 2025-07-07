@@ -1,3 +1,6 @@
+instrument: {
+    type: keyboard
+}
 settings: {
     truesf: true,
     columns: 2,
