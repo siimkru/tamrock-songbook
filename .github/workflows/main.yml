@@ -4,13 +4,12 @@ name: Build and Upload ChordPro PDFs
 on:
   push:
     branches:
-      - main  # Or 'master', depending on your default branch
-  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-upload:
     runs-on: ubuntu-latest
-
     permissions:
       contents: 'read'
 
@@ -49,6 +48,18 @@ jobs:
             echo "process_list=$FILES_TO_PROCESS" >> $GITHUB_OUTPUT
           fi
 
+      # --- NEW DEBUGGING STEP ---
+      # This step will print the contents of the config files to the log.
+      - name: Debug - Show Config File Contents
+        if: steps.changed-files.outputs.process_list != ''
+        run: |
+          echo "--- Contents of guitar.json ---"
+          cat guitar.json
+          echo
+          echo "--- Contents of keyboard.json ---"
+          cat keyboard.json
+          echo "---------------------------------"
+
       - name: Generate and Upload PDFs
         if: steps.changed-files.outputs.process_list != ''
         env:
@@ -63,13 +74,11 @@ jobs:
             # Generate Guitar PDF
             GUITAR_PDF="${BASENAME}-Guitar.pdf"
             echo "Generating $GUITAR_PDF..."
-            # FIXED: Explicitly call the 'chordpro' executable inside the container
             docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
             
             # Generate Keyboard PDF
             KEYBOARD_PDF="${BASENAME}-Keyboard.pdf"
             echo "Generating $KEYBOARD_PDF..."
-            # FIXED: Explicitly call the 'chordpro' executable inside the container
             docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
             
             # Upload both PDFs
