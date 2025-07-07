@@ -1,0 +1,83 @@
+# .github/workflows/main.yml
+name: Build and Upload ChordPro PDFs
+
+on:
+  push:
+    branches:
+      - main  # Or 'master', depending on your default branch
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    # Only run if .cho files were changed
+    if: "contains(github.event.head_commit.message, '[force build]') || !contains(github.event.head_commit.message, '[skip ci]')"
+
+    permissions:
+      contents: 'read' # Required to checkout the repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history so we can diff against the previous commit
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
+      - name: Find changed .cho files
+        id: changed-files
+        run: |
+          # Get a list of .cho files changed in the last push
+          # This handles new files (A), modified files (M), and renamed files (R)
+          CHANGED_CHO_FILES=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' || true)
+          if [ -z "$CHANGED_CHO_FILES" ]; then
+            echo "No .cho files changed. Skipping PDF generation."
+            echo "files_to_process=''" >> $GITHUB_OUTPUT
+          else
+            echo "Found changed files:"
+            echo "$CHANGED_CHO_FILES"
+            # Convert the list to a single, space-separated string for the next step
+            echo "files_to_process=$(echo $CHANGED_CHO_FILES | tr '\n' ' ')" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate and Upload PDFs
+        if: steps.changed-files.outputs.files_to_process != ''
+        env:
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+          GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
+        run: |
+          for file in ${{ steps.changed-files.outputs.files_to_process }}; do
+            BASENAME=$(basename "$file" .cho)
+            
+            echo "--- Processing $BASENAME ---"
+
+            # Generate Guitar PDF
+            GUITAR_PDF="${BASENAME}-Guitar.pdf"
+            echo "Generating $GUITAR_PDF..."
+            docker run --rm -v "$(pwd):/app" hakonhb/chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
+            
+            # Generate Keyboard PDF
+            KEYBOARD_PDF="${BASENAME}-Keyboard.pdf"
+            echo "Generating $KEYBOARD_PDF..."
+            docker run --rm -v "$(pwd):/app" hakonhb/chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
+            
+            # Upload both PDFs
+            echo "Uploading $GUITAR_PDF to Google Drive..."
+            python upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID"
+            
+            echo "Uploading $KEYBOARD_PDF to Google Drive..."
+            python upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID"
+          done
+
+      - name: Cleanup generated PDFs
+        if: always() && steps.changed-files.outputs.files_to_process != ''
+        run: rm -f *.pdf

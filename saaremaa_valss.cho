@@ -4,7 +4,6 @@
 {define: Gm/Bb base-fret 1 frets X 1 0 3 3 3}
 {define: F/C base-fret 1 frets X 3 3 2 1 1}
 {define: A7/E base-fret 1 frets 0 0 2 0 2 0}
-
 {comment: Intro}
 [F] [F/A] [C7] [F] [F] [F/A] [Bb] [C]
 {start_of_verse: Salm 1}
@@ -13,7 +12,7 @@ kui [C7]nendesse [C7/G]vajutad [C7]hõõguva [F]näo.
 Ja [A7/E]pühapäev [A7]hinges sind [Dm]uskuda [Gm/Bb]laseb,
 et [Bbm]õnne vaid [F/C]kauguses [G7]kukuvad [C7]käod.
 {end_of_verse}
-{start_of_chorus Refrään}
+{start_of_chorus}
 Oh, [F]keeruta, [C7]lennuta [F]linalakk[Dm]neidu,
 kel [Gm]silmist nii [C7]kelmikaid [F]sädemeid [F7]lööb!
 Ei [Bb]sellist küll [F]maailmas [C7]kusagil [Dm]leidu
@@ -28,20 +27,20 @@ Miks [A7/E]muidu su [A7]huuled ja [Dm]õhetav [Gm/Bb]pale
 nii [Bbm]õunapuu[F/C]õiele [G7]sarnane [C7]näib!
 {end_of_verse}
 {chorus}
-{start_of_verse: Salm 2}
+{start_of_verse: Salm 3}
 Oi, [F]Saaremaa [F/C]niitude [C7]kastesed [C7/G]süled,
 öö[C7]vaikuses [C7/G]lauludest [C7]helisev [F]nurm!
 On [A7/E]pilvedest [A7]helendav [Dm]taevas su [Gm/Bb]üle,
 ja [Bbm]kirgliku [F/C]suudluse [G7]esmane [C7]hurm!
 {end_of_verse}
 {chorus}
-{start_of_verse: Salm 2}
+{start_of_verse: Salm 4}
 Just [F]sellisel [F/C]heinamaal [C7]peamegi [C7/G]pidu,
 kus [C7]hämarik [C7/G]koidule [C7]ulatab [F]käe.
 On [A7/E]kõikide [A7]mõtteid ja [Dm]toiminguid [Gm/Bb]sidund
 see [Bbm]tööde ning [F/C]rõõmude[G7]küllane [C7]päev.
 {end_of_verse}
-{start_of_chorus Viimane refrään}
+{start_of_chorus}
 Oh, [F]keeruta, [C7]kudruta [F]kavalat [Dm]juttu,
 kuld[Gm]tärniga [C7]nooruke [F]sõjamees [F7]sa.
 Me [Bb]ööd on nii [F]valged ja [C7]kuluvad [Dm]ruttu,
