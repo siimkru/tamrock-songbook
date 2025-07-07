@@ -5,7 +5,6 @@ settings: {
     truesf: true,
     columns: 2,
     suppress-empty-chords: true,
-    transpose: 0,
     decapo: true
 }
 
@@ -16,8 +15,6 @@ suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
 
 pdf: {
 papersize: a4,
-columnspace: 25,
-
 fontconfig: {
 serif: {
 "":          Times-Roman,
@@ -45,12 +42,7 @@ chord:        "sans bold 10",
 title:        "serif bold 18",
 subtitle:     "serif 14",
 comment:      "sans italic 11",
-comment_box: {
-name:       sans,
-size:       10,
-frame:      1,
-background: grey95
-},
+
 tab: "mono 10",
 toc: "serif 12"
 },
