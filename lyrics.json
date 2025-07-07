@@ -1,0 +1,33 @@
+
+settings: {
+    lyrics-only: true,
+    }
+
+    pdf: {
+    papersize: a4,
+
+    chorus: {
+    recall: {
+    choruslike: true,
+    quote: true
+    }
+    },
+
+
+    // Explicitly disabling all diagram types
+    diagrams: {
+    show: none
+    },
+    kbdiagrams: {
+    show: none
+    },
+
+    formats: {
+    title: {
+    footer: [ "%{artist}", "%{title}", "%{page}/%{pages}" ]
+    },
+    default: {
+    footer: [ "%{artist}", "%{title}", "%{page}/%{pages}" ]
+    }
+    }
+    }
