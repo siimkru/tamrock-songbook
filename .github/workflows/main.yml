@@ -34,9 +34,11 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             echo "Manual run: Processing all .cho files in the repository."
+            # Use -printf "%f " to create a space-separated list
             FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
           else
             echo "Push event: Checking for changed .cho files."
+            # Use tr to convert newlines to spaces
             FILES_TO_PROCESS=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' | tr '\n' ' ' || true)
           fi
 
@@ -49,8 +51,8 @@ jobs:
           fi
 
       - name: Generate and Upload PDFs
-        # FIXED: Use the length() function for a robust check
-        if: length(steps.changed-files.outputs.process_list) > 0
+        # FIXED: This is the correct, standard way to check if the output is non-empty.
+        if: steps.changed-files.outputs.process_list
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
           GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
@@ -79,6 +81,6 @@ jobs:
           done
 
       - name: Cleanup generated PDFs
-        # FIXED: Use the length() function for a robust check
-        if: always() && length(steps.changed-files.outputs.process_list) > 0
+        # FIXED: Using the same correct check here.
+        if: always() && steps.changed-files.outputs.process_list
         run: rm -f *.pdf
