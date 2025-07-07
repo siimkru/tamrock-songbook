@@ -1,76 +1,85 @@
-{
-  // --- MASTER SWITCH: This tells ChordPro to generate GUITAR diagrams ---
-  "instrument": {
-    "type": "guitar"
-  },
+settings: {
+    truesf: true,
+    columns: 2,
+    suppress-empty-chords: true,
+    transpose: 0,
+    decapo: true
+}
 
-  // --- General Settings ---
-  "settings": {
-    "truesf": true,
-    "columns": 2,
-    "suppress-empty-chords": true
-  },
+diagrams: {
+sorted: true,
+suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
+}
 
-  // --- PDF Output Settings ---
-  "pdf": {
-    "papersize": "a4",
+pdf: {
+papersize: a4,
+columnspace: 25,
 
-    // --- Font Definitions (UPDATED to modern array format) ---
-    "fontconfig": [
-      {
-        "name": "serif",
-        "regular": "Times-Roman",
-        "bold": "Times-Bold",
-        "italic": "Times-Italic",
-        "bolditalic": "Times-BoldItalic"
-      },
-      {
-        "name": "sans",
-        "regular": "Helvetica",
-        "bold": "Helvetica-Bold",
-        "italic": "Helvetica-Oblique",
-        "bolditalic": "Helvetica-BoldOblique"
-      },
-      {
-        "name": "mono",
-        "regular": "Courier",
-        "bold": "Courier-Bold",
-        "italic": "Courier-Oblique",
-        "bolditalic": "Courier-BoldOblique"
-      }
-    ],
+fontconfig: {
+serif: {
+"":          Times-Roman,
+bold:        Times-Bold,
+italic:      Times-Italic,
+bolditalic:  Times-BoldItalic
+},
+sans: {
+"":          Helvetica,
+bold:        Helvetica-Bold,
+italic:      Helvetica-Oblique,
+bolditalic:  Helvetica-BoldOblique
+},
+mono: {
+"":          Courier,
+bold:        Courier-Bold,
+italic:      Courier-Oblique,
+bolditalic:  Courier-BoldOblique
+}
+},
 
-    // --- Font Assignments ---
-    "fonts": {
-      "text": "serif 12",
-      "chord": "sans bold 10",
-      "title": "serif bold 18",
-      "subtitle": "serif 14",
-      "comment": "sans italic 11",
-      "comment_box": { "name": "sans", "size": 10, "frame": 1, "background": "grey95" },
-      "tab": "mono 10"
-    },
+fonts: {
+text:         "serif 12",
+chord:        "sans bold 10",
+title:        "serif bold 18",
+subtitle:     "serif 14",
+comment:      "sans italic 11",
+comment_box: {
+name:       sans,
+size:       10,
+frame:      1,
+background: grey95
+},
+tab: "mono 10",
+toc: "serif 12"
+},
 
-    // --- Spacing ---
-    "spacing": {
-      "lyrics": 1.4,
-      "empty": 1.2
-    },
+spacing: {
+lyrics: 1.4,
+empty: 1.2
+},
 
-    // --- Chorus Styling ---
-    "chorus": {
-      "indent": 15,
-      "bar": { "width": 1, "offset": 8, "color": "grey60" },
-      "recall": { "choruslike": true, "quote": true }
-    },
-      "diagrams": {
-          show: below
-      },
+chorus: {
+indent: 15,
+bar: {
+width: 1,
+offset: 8,
+color: grey60
+},
+recall: {
+choruslike: true,
+quote: true
+}
+},
 
-    // --- Page Headers & Footers ---
-    "formats": {
-      "title":    { "footer": [ "%{title}", "", "%{page}/%{pages}" ] },
-      "default":  { "footer": [ "%{title}", "", "%{page}/%{pages}" ] }
-    }
-  }
+diagrams: {
+show: below
+},
+
+formats: {
+title: {
+footer: [ "%{artist}", "%{title}", "%{page}/%{pages}" ]
+},
+default: {
+footer: [ "%{artist}", "%{title}", "%{page}/%{pages}" ]
+}
+}
 }
