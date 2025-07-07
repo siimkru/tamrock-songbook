@@ -11,9 +11,6 @@ jobs:
   build-and-upload:
     runs-on: ubuntu-latest
 
-    # We removed the job-level 'if' condition that caused the error.
-    # The logic is now handled inside the steps below.
-
     permissions:
       contents: 'read'
 
@@ -21,7 +18,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Fetch all history so we can diff against the previous commit
           fetch-depth: 0
 
       - name: Set up Python
@@ -37,13 +33,10 @@ jobs:
       - name: Find files to process
         id: changed-files
         run: |
-          # If this is a manual run ('workflow_dispatch'), process all .cho files
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             echo "Manual run: Processing all .cho files in the repository."
-            # Find all .cho files in the root directory
             FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f\n" | tr '\n' ' ')
           else
-            # On a push, find only the .cho files changed in the last commit
             echo "Push event: Checking for changed .cho files."
             FILES_TO_PROCESS=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' | tr '\n' ' ' || true)
           fi
@@ -57,8 +50,6 @@ jobs:
           fi
 
       - name: Generate and Upload PDFs
-        # This is the crucial 'if'. It checks the output of the step above.
-        # It will only run if the 'process_list' is not empty.
         if: steps.changed-files.outputs.process_list != ''
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
@@ -72,12 +63,14 @@ jobs:
             # Generate Guitar PDF
             GUITAR_PDF="${BASENAME}-Guitar.pdf"
             echo "Generating $GUITAR_PDF..."
-            docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
+            # FIXED: Explicitly call the 'chordpro' executable inside the container
+            docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
             
             # Generate Keyboard PDF
             KEYBOARD_PDF="${BASENAME}-Keyboard.pdf"
             echo "Generating $KEYBOARD_PDF..."
-            docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
+            # FIXED: Explicitly call the 'chordpro' executable inside the container
+            docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
             
             # Upload both PDFs
             echo "Uploading $GUITAR_PDF to Google Drive..."
@@ -88,6 +81,5 @@ jobs:
           done
 
       - name: Cleanup generated PDFs
-        # This step also uses the same condition to avoid running needlessly.
         if: always() && steps.changed-files.outputs.process_list != ''
         run: rm -f *.pdf
