@@ -62,7 +62,6 @@ jobs:
           echo "Files to process: [${FILES_TO_PROCESS}]"
 
       - name: Generate and Upload PDFs
-        # This 'if' condition remains the same and works with the logic above.
         if: steps.changed-files.outputs.process_list
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
@@ -70,25 +69,34 @@ jobs:
         run: |
           for file in ${{ steps.changed-files.outputs.process_list }}; do
             BASENAME=$(basename "$file" .cho)
-            
+
             echo "--- Processing $BASENAME ---"
 
             # Generate Guitar PDF
-            GUITAR_PDF="${BASENAME}-Guitar.pdf"
+            GUITAR_PDF="${BASENAME}-Kitarr.pdf"
             echo "Generating $GUITAR_PDF..."
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
-            
+
             # Generate Keyboard PDF
-            KEYBOARD_PDF="${BASENAME}-Keyboard.pdf"
+            KEYBOARD_PDF="${BASENAME}-Klaver.pdf"
             echo "Generating $KEYBOARD_PDF..."
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
-            
-            # Upload both PDFs
+
+            # --- NEW: Generate Lyrics PDF ---
+            LYRICS_PDF="${BASENAME}-Ainult_sonad.pdf"
+            echo "Generating $LYRICS_PDF..."
+            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=lyrics.json -o "$LYRICS_PDF" "$file"
+
+            # Upload all PDFs
             echo "Uploading $GUITAR_PDF to Google Drive..."
             python upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID"
-            
+
             echo "Uploading $KEYBOARD_PDF to Google Drive..."
             python upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID"
+
+            # --- NEW: Upload Lyrics PDF ---
+            echo "Uploading $LYRICS_PDF to Google Drive..."
+            python upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID"
           done
 
       - name: Cleanup generated PDFs
