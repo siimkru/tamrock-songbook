@@ -17,7 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Fetch all history so we can diff against the previous commit
           fetch-depth: 0
 
       - name: Set up Python
@@ -45,9 +44,8 @@ jobs:
             echo "Push event: Checking for changed files."
             CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD)
 
-            # --- NEW LOGIC ---
             # If a config file was changed, rebuild everything.
-            if echo "$CHANGED_FILES" | grep -q -E 'guitar\.json|keyboard\.json'; then
+            if echo "$CHANGED_FILES" | grep -q -E 'guitar\.json|keyboard\.json|lyrics\.json'; then
               echo "Config file change detected! Rebuilding all .cho files."
               FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
             else
