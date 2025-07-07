@@ -1,4 +1,6 @@
-
+instrument: {
+type: vocals
+}
 settings: {
     lyrics-only: true,
     }
