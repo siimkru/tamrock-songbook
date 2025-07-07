@@ -1,82 +1,76 @@
-settings: {
-    truesf: true,
-    columns: 2,
+{
+  // --- MASTER SWITCH: This tells ChordPro to generate GUITAR diagrams ---
+  "instrument": {
+    "type": "guitar"
+  },
+
+  // --- General Settings ---
+  "settings": {
+    "truesf": true,
+    "columns": 2,
     "suppress-empty-chords": true
+  },
+
+  // --- PDF Output Settings ---
+  "pdf": {
+    "papersize": "a4",
+
+    // --- Font Definitions (UPDATED to modern array format) ---
+    "fontconfig": [
+      {
+        "name": "serif",
+        "regular": "Times-Roman",
+        "bold": "Times-Bold",
+        "italic": "Times-Italic",
+        "bolditalic": "Times-BoldItalic"
+      },
+      {
+        "name": "sans",
+        "regular": "Helvetica",
+        "bold": "Helvetica-Bold",
+        "italic": "Helvetica-Oblique",
+        "bolditalic": "Helvetica-BoldOblique"
+      },
+      {
+        "name": "mono",
+        "regular": "Courier",
+        "bold": "Courier-Bold",
+        "italic": "Courier-Oblique",
+        "bolditalic": "Courier-BoldOblique"
+      }
+    ],
+
+    // --- Font Assignments ---
+    "fonts": {
+      "text": "serif 12",
+      "chord": "sans bold 10",
+      "title": "serif bold 18",
+      "subtitle": "serif 14",
+      "comment": "sans italic 11",
+      "comment_box": { "name": "sans", "size": 10, "frame": 1, "background": "grey95" },
+      "tab": "mono 10"
+    },
+
+    // --- Spacing ---
+    "spacing": {
+      "lyrics": 1.4,
+      "empty": 1.2
+    },
+
+    // --- Chorus Styling ---
+    "chorus": {
+      "indent": 15,
+      "bar": { "width": 1, "offset": 8, "color": "grey60" },
+      "recall": { "choruslike": true, "quote": true }
+    },
+      "diagrams": {
+          show: below
+      },
+
+    // --- Page Headers & Footers ---
+    "formats": {
+      "title":    { "footer": [ "%{title}", "", "%{page}/%{pages}" ] },
+      "default":  { "footer": [ "%{title}", "", "%{page}/%{pages}" ] }
+    }
+  }
 }
-
-pdf: {
-    papersize: a4
-    fontconfig: {
-    serif: {
-    "":          Times-Roman,
-    bold:        Times-Bold,
-    italic:      Times-Italic,
-    bolditalic:  Times-BoldItalic
-    },
-    sans: {
-    "":          Helvetica,
-    bold:        Helvetica-Bold,
-    italic:      Helvetica-Oblique,
-    bolditalic:  Helvetica-BoldOblique
-    }
-    }
-
-    fonts: {
-    text:         "serif 12"
-    chord:        "sans bold 10"
-    title:        "serif bold 18"
-    subtitle:     "serif 14"
-    comment:      "sans italic 11"
-    comment_box: {
-    name:       sans,
-    size:       10,
-    frame:      1,
-    background: grey95
-    }
-    }
-
-    spacing: {
-    lyrics: 1.4
-    empty: 1.2
-    }
-
-    chorus: {
-    indent: 15
-    bar: {
-    width: 1
-    offset: 8
-    color: grey60
-    }
-    recall: {
-    choruslike: true
-    quote: true
-    }
-    }
-
-
-
-    diagrams: {
-    show: below
-    }
-    kbdiagrams {
-    show     :  bottom,
-    align    :  left,
-    width    :   4,
-    height   :  20,
-    keys     :  14,
-    base     :  "C",
-    linewidth : 0.1,
-    pressed  :  foreground-medium,
-    hspace   :  3.95,
-    vspace   :  0.3,
-    },
-
-    formats: {
-    title: {
-    footer: [ "%{title}", "", "%{page}/%{pages}" ]
-    }
-    default: {
-    footer: [ "%{title}", "", "%{page}/%{pages}" ]
-    }
-    }
-    }
