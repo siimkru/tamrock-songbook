@@ -4,36 +4,44 @@
 {define: D/F# base-fret 1 frets 2 0 0 2 3 2}
 {comment: Intro}
 [Em] [Bm]
+
 {start_of_verse Salm 1}
 Üle [Em]vainude [Bm]valendav [Em]aur, [Bm]
 vahu[Em]lillede [Bm]udune [Em]voodi. [D/F#]
 Iga[G]ühel on [D]südame [G]laul, [D]
 iga[G]ühel on [D]see ise[Em]moodi.  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
+
 {start_of_chorus}
 [Am]Aaaa [Em]aaaa [Am]aaaa [C]aaa
 [Am]aaaa [C]aaaa [D]aaaa [Em]aaa     [Em] [Em/F#] [Em/G]
 [Am]Aaaa [Em]aaaa [D]aaaa [C]aaa
 [Am]aaaa [C]aaaa [D]aaaa [Em]aaa  [Bm] [Em] [Bm]
 {end_of_chorus}
+
 {start_of_verse Salm 2}
 Lähen [Em]karjateed, [Bm]karukell [Em]käes –  [Bm]
 kutsun [Em]hiliseid [Bm]laule ma [Em]koju, [D/F#]
 ja nad [G]tulevad [D]männiku[G]mäelt, [D]
 kõige [G]viimane [D]udus veel [Em]ujub.  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
+
 {chorus}
+
 {start_of_verse Salm 3}
 Minu [Em]laule vist [Bm]teavad siin [Em]kõik,  [Bm]
 udus [Em]ripuvad [Bm]kelluka[Em]kannud.  [D/F#]
 Kuna [G]kõik nad siit [D]karjamaalt [G]sõid,  [D]
 nüüd üks [G]vallatu [D]plehku on [Em]pannud!  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
+
 {chorus}
+
 {start_of_verse Salm 4}
 Üle [Em]vainude [Bm]valendav [Em]aur,  [Bm]
 mul on [Em]närbunud [Bm]karukell [Em]süles.  [D/F#]
 Iga[G]ühel on [D]siin oma [G]laul,  [D]
 ja ma [G]oma ei [D]leiagi [Em]üles.  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
+
 {chorus}
