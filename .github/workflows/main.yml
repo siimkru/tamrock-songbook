@@ -32,6 +32,10 @@ jobs:
       - name: Find files to process
         id: changed-files
         run: |
+          # Initialize variable to be empty
+          FILES_TO_PROCESS=""
+
+          # Populate variable based on the event type
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             echo "Manual run: Processing all .cho files in the repository."
             # Use -printf "%f " to create a space-separated list
@@ -41,17 +45,13 @@ jobs:
             # Use tr to convert newlines to spaces
             FILES_TO_PROCESS=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' | tr '\n' ' ' || true)
           fi
-
-          if [ -z "$FILES_TO_PROCESS" ]; then
-            echo "No .cho files to process."
-            echo "process_list=''" >> $GITHUB_OUTPUT
-          else
-            echo "Files to process: $FILES_TO_PROCESS"
-            echo "process_list=$FILES_TO_PROCESS" >> $GITHUB_OUTPUT
-          fi
+          
+          # Set the output. This will be a true empty string if the commands above found nothing.
+          echo "process_list=$FILES_TO_PROCESS" >> $GITHUB_OUTPUT
+          echo "Files to process: [${FILES_TO_PROCESS}]" # Adding brackets for clearer log output
 
       - name: Generate and Upload PDFs
-        # FIXED: This is the correct, standard way to check if the output is non-empty.
+        # This standard 'if' condition will now work correctly.
         if: steps.changed-files.outputs.process_list
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
@@ -81,6 +81,5 @@ jobs:
           done
 
       - name: Cleanup generated PDFs
-        # FIXED: Using the same correct check here.
         if: always() && steps.changed-files.outputs.process_list
         run: rm -f *.pdf
