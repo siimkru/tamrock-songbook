@@ -17,6 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # Fetch all history so we can diff against the previous commit
           fetch-depth: 0
 
       - name: Set up Python
@@ -35,23 +36,33 @@ jobs:
           # Initialize variable to be empty
           FILES_TO_PROCESS=""
 
-          # Populate variable based on the event type
+          # Handle a manual run first
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "Manual run: Processing all .cho files in the repository."
-            # Use -printf "%f " to create a space-separated list
+            echo "Manual run: Processing all .cho files."
             FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
           else
-            echo "Push event: Checking for changed .cho files."
-            # Use tr to convert newlines to spaces
-            FILES_TO_PROCESS=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' | tr '\n' ' ' || true)
+            # This is a push event. Check what changed.
+            echo "Push event: Checking for changed files."
+            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD)
+
+            # --- NEW LOGIC ---
+            # If a config file was changed, rebuild everything.
+            if echo "$CHANGED_FILES" | grep -q -E 'guitar\.json|keyboard\.json'; then
+              echo "Config file change detected! Rebuilding all .cho files."
+              FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
+            else
+              # Otherwise, only process the .cho files that changed.
+              echo "No config file change. Processing only changed .cho files."
+              FILES_TO_PROCESS=$(echo "$CHANGED_FILES" | grep '\.cho$' | tr '\n' ' ' || true)
+            fi
           fi
           
-          # Set the output. This will be a true empty string if the commands above found nothing.
+          # Set the output.
           echo "process_list=$FILES_TO_PROCESS" >> $GITHUB_OUTPUT
-          echo "Files to process: [${FILES_TO_PROCESS}]" # Adding brackets for clearer log output
+          echo "Files to process: [${FILES_TO_PROCESS}]"
 
       - name: Generate and Upload PDFs
-        # This standard 'if' condition will now work correctly.
+        # This 'if' condition remains the same and works with the logic above.
         if: steps.changed-files.outputs.process_list
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
