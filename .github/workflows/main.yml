@@ -34,7 +34,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             echo "Manual run: Processing all .cho files in the repository."
-            FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f\n" | tr '\n' ' ')
+            FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
           else
             echo "Push event: Checking for changed .cho files."
             FILES_TO_PROCESS=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' | tr '\n' ' ' || true)
@@ -49,7 +49,8 @@ jobs:
           fi
 
       - name: Generate and Upload PDFs
-        if: steps.changed-files.outputs.process_list != ''
+        # FIXED: Use the length() function for a robust check
+        if: length(steps.changed-files.outputs.process_list) > 0
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
           GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
@@ -62,13 +63,11 @@ jobs:
             # Generate Guitar PDF
             GUITAR_PDF="${BASENAME}-Guitar.pdf"
             echo "Generating $GUITAR_PDF..."
-            # FIXED: Added -w /app to set the working directory inside the container
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
             
             # Generate Keyboard PDF
             KEYBOARD_PDF="${BASENAME}-Keyboard.pdf"
             echo "Generating $KEYBOARD_PDF..."
-            # FIXED: Added -w /app to set the working directory inside the container
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
             
             # Upload both PDFs
@@ -80,5 +79,6 @@ jobs:
           done
 
       - name: Cleanup generated PDFs
-        if: always() && steps.changed-files.outputs.process_list != ''
+        # FIXED: Use the length() function for a robust check
+        if: always() && length(steps.changed-files.outputs.process_list) > 0
         run: rm -f *.pdf
