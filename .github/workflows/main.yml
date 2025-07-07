@@ -5,22 +5,22 @@ on:
   push:
     branches:
       - main  # Or 'master', depending on your default branch
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 jobs:
   build-and-upload:
     runs-on: ubuntu-latest
 
-    # Only run if .cho files were changed
-    if: "contains(github.event.head_commit.message, '[force build]') || !contains(github.event.head_commit.message, '[skip ci]')"
+    # This 'if' condition is now smarter. It checks for changed .cho files OR a manual run.
+    if: "github.event_name == 'workflow_dispatch' || contains(steps.changed-files.outputs.files_to_process, '.cho')"
 
     permissions:
-      contents: 'read' # Required to checkout the repo
+      contents: 'read'
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Fetch all history so we can diff against the previous commit
           fetch-depth: 0
 
       - name: Set up Python
@@ -36,8 +36,15 @@ jobs:
       - name: Find changed .cho files
         id: changed-files
         run: |
-          # Get a list of .cho files changed in the last push
-          # This handles new files (A), modified files (M), and renamed files (R)
+          # If this is a manual run, process all .cho files
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "Manual run detected. Processing all .cho files."
+            ALL_CHO_FILES=$(find . -maxdepth 1 -name "*.cho" -printf "%f\n")
+            echo "files_to_process=$(echo $ALL_CHO_FILES | tr '\n' ' ')" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Otherwise, find files changed in the last push
           CHANGED_CHO_FILES=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD | grep '\.cho$' || true)
           if [ -z "$CHANGED_CHO_FILES" ]; then
             echo "No .cho files changed. Skipping PDF generation."
@@ -45,11 +52,11 @@ jobs:
           else
             echo "Found changed files:"
             echo "$CHANGED_CHO_FILES"
-            # Convert the list to a single, space-separated string for the next step
             echo "files_to_process=$(echo $CHANGED_CHO_FILES | tr '\n' ' ')" >> $GITHUB_OUTPUT
           fi
 
       - name: Generate and Upload PDFs
+        # This step only runs if the previous step found files to process.
         if: steps.changed-files.outputs.files_to_process != ''
         env:
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
@@ -63,12 +70,14 @@ jobs:
             # Generate Guitar PDF
             GUITAR_PDF="${BASENAME}-Guitar.pdf"
             echo "Generating $GUITAR_PDF..."
-            docker run --rm -v "$(pwd):/app" hakonhb/chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
+            # FIXED: Use the official chordpro/chordpro image and set user permissions
+            docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
             
             # Generate Keyboard PDF
             KEYBOARD_PDF="${BASENAME}-Keyboard.pdf"
             echo "Generating $KEYBOARD_PDF..."
-            docker run --rm -v "$(pwd):/app" hakonhb/chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
+            # FIXED: Use the official chordpro/chordpro image and set user permissions
+            docker run --rm -v "$(pwd):/app" --user $(id -u):$(id -g) chordpro/chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
             
             # Upload both PDFs
             echo "Uploading $GUITAR_PDF to Google Drive..."
