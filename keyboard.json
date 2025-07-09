@@ -10,7 +10,7 @@ settings: {
 
 diagrams: {
 sorted: true,
-suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
+//suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
 }
 
 pdf: {

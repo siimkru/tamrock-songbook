@@ -1,4 +1,7 @@
 {title: Kaks tüdrukut}
+{define: Eb base-fret 6 frets X 1 3 3 3 X}
+{define: Eb/G base-fret 3 frets X X 3 1 2 1}
+{define: Bb/D base-fret 1 frets X X 0 3 3 1}
 {comment: Intro}
 [G] [C] [D] [G]
 x4
