@@ -7,28 +7,47 @@ from googleapiclient.http import MediaFileUpload
 
 
 def upload_file(service, file_path, folder_id):
-    """Uploads a file to a specific folder, updating it if it already exists."""
+    """Uploads a file to a specific Shared Drive folder, updating it if it already exists."""
     file_name = os.path.basename(file_path)
 
-    # Check if the file already exists in the folder
+    # Kontrollime, kas fail on juba olemas selles kaustas
     query = f"name='{file_name}' and '{folder_id}' in parents and trashed=false"
-    response = service.files().list(q=query, spaces='drive', fields='files(id, name)').execute()
+    response = service.files().list(
+        q=query,
+        spaces='drive',
+        supportsAllDrives=True,
+        includeItemsFromAllDrives=True,
+        fields='files(id, name)'
+    ).execute()
     files = response.get('files', [])
 
     media = MediaFileUpload(file_path, mimetype='application/pdf')
 
     if files:
-        # File exists, update it
+        # Fail on olemas, uuendame
         file_id = files[0].get('id')
         print(f"File '{file_name}' already exists. Updating it (ID: {file_id})...")
-        service.files().update(fileId=file_id, media_body=media).execute()
+        service.files().update(
+            fileId=file_id,
+            media_body=media,
+            supportsAllDrives=True
+        ).execute()
         print("Update complete.")
     else:
-        # File does not exist, create it
+        # Faili pole, loome uue
         print(f"File '{file_name}' not found. Creating it...")
-        file_metadata = {'name': file_name, 'parents': [folder_id]}
-        service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+        file_metadata = {
+            'name': file_name,
+            'parents': [folder_id]
+        }
+        service.files().create(
+            body=file_metadata,
+            media_body=media,
+            fields='id',
+            supportsAllDrives=True
+        ).execute()
         print("Upload complete.")
+
 
 
 if __name__ == '__main__':
