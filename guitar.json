@@ -4,6 +4,7 @@ settings: {
     suppress-empty-chords: true,
     decapo: true
 }
+
 diagrams: {
 sorted: true,
 suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
