@@ -9,7 +9,7 @@ settings: {
 }
 
 diagrams: {
-sorted: true,
+    sorted: true,
 //suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
 }
 
