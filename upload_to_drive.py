@@ -1,53 +1,78 @@
 # upload_to_drive.py
 import os
 import sys
-from google.oauth2 import service_account
+import json
+from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
+from googleapiclient.errors import HttpError
+
+# The token URI is always the same for Google's OAuth 2.0
+TOKEN_URI = "https://oauth2.googleapis.com/token"
+
+
+def get_credentials():
+    """Constructs credentials object from environment variables."""
+    client_id = os.getenv('GDRIVE_CLIENT_ID')
+    client_secret = os.getenv('GDRIVE_CLIENT_SECRET')
+    refresh_token = os.getenv('GDRIVE_REFRESH_TOKEN')
+
+    if not all([client_id, client_secret, refresh_token]):
+        print(
+            "Error: Required environment variables (GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN) are not set.")
+        sys.exit(1)
+
+    return Credentials(
+        token=None,  # No access token needed, it will be fetched using the refresh token
+        refresh_token=refresh_token,
+        token_uri=TOKEN_URI,
+        client_id=client_id,
+        client_secret=client_secret
+    )
 
 
 def upload_file(service, file_path, folder_id):
-    """Uploads a file to a specific Shared Drive folder, updating it if it already exists."""
+    """Uploads a file to a specific folder, updating it if it already exists."""
     file_name = os.path.basename(file_path)
 
-    # Kontrollime, kas fail on juba olemas selles kaustas
-    query = f"name='{file_name}' and '{folder_id}' in parents and trashed=false"
-    response = service.files().list(
-        q=query,
-        spaces='drive',
-        supportsAllDrives=True,
-        includeItemsFromAllDrives=True,
-        fields='files(id, name)'
-    ).execute()
-    files = response.get('files', [])
-
-    media = MediaFileUpload(file_path, mimetype='application/pdf')
-
-    if files:
-        # Fail on olemas, uuendame
-        file_id = files[0].get('id')
-        print(f"File '{file_name}' already exists. Updating it (ID: {file_id})...")
-        service.files().update(
-            fileId=file_id,
-            media_body=media,
-            supportsAllDrives=True
+    try:
+        # Check if the file already exists in this folder
+        query = f"name='{file_name}' and '{folder_id}' in parents and trashed=false"
+        response = service.files().list(
+            q=query,
+            spaces='drive',
+            fields='files(id, name)'
         ).execute()
-        print("Update complete.")
-    else:
-        # Faili pole, loome uue
-        print(f"File '{file_name}' not found. Creating it...")
-        file_metadata = {
-            'name': file_name,
-            'parents': [folder_id]
-        }
-        service.files().create(
-            body=file_metadata,
-            media_body=media,
-            fields='id',
-            supportsAllDrives=True
-        ).execute()
-        print("Upload complete.")
+        existing_files = response.get('files', [])
 
+        media = MediaFileUpload(file_path, mimetype='application/pdf', resumable=True)
+
+        if existing_files:
+            # File exists, so update it
+            file_id = existing_files[0].get('id')
+            print(f"File '{file_name}' already exists. Updating it (ID: {file_id})...")
+            service.files().update(
+                fileId=file_id,
+                media_body=media,
+            ).execute()
+            print("Update complete.")
+        else:
+            # File does not exist, so create it
+            print(f"File '{file_name}' not found. Creating it...")
+            file_metadata = {
+                'name': file_name,
+                'parents': [folder_id]
+            }
+            service.files().create(
+                body=file_metadata,
+                media_body=media,
+                fields='id'
+            ).execute()
+            print("Upload complete.")
+
+    except HttpError as error:
+        print(f"An error occurred: {error}")
+        sys.exit(1)
 
 
 if __name__ == '__main__':
@@ -57,18 +82,8 @@ if __name__ == '__main__':
 
     file_to_upload = sys.argv[1]
     folder_id = sys.argv[2]
-    credentials_json = os.getenv('GDRIVE_CREDENTIALS')
 
-    if not credentials_json:
-        print("Error: GDRIVE_CREDENTIALS environment variable not set.")
-        sys.exit(1)
-
-    # The GitHub Action sets up credentials for us, but this script can also work locally
-    # if you export the secret as an environment variable.
-    import json
-
-    creds_info = json.loads(credentials_json)
-    creds = service_account.Credentials.from_service_account_info(creds_info)
+    creds = get_credentials()
     service = build('drive', 'v3', credentials=creds)
 
     upload_file(service, file_to_upload, folder_id)
