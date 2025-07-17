@@ -4,6 +4,7 @@
 {define: Gm/Bb base-fret 1 frets X 1 0 3 3 3}
 {define: F/C base-fret 1 frets X 3 3 2 1 1}
 {define: A7/E base-fret 1 frets 0 0 2 0 2 0}
+{comment-guitar: Kõik vahemängud pikemad e. nagu intro}
 {comment: Intro}
 [F] [F/A] [C7] [F] [F] [F/A] [Bb] [C]
 
