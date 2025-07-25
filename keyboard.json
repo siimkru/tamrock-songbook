@@ -13,7 +13,6 @@ diagrams: {
 //suppress: [ C, G, D, A, E, F, Am, Em, Dm ]
 }
 
-
 pdf: {
 papersize: a4,
 fontconfig: {

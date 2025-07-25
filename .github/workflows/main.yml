@@ -82,7 +82,6 @@ jobs:
             echo "Generating $KEYBOARD_PDF..."
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
 
-            # --- NEW: Generate Lyrics PDF ---
             LYRICS_PDF="${BASENAME}-Ainult_sonad.pdf"
             echo "Generating $LYRICS_PDF..."
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=lyrics.json -o "$LYRICS_PDF" "$file"
