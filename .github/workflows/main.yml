@@ -93,7 +93,6 @@ jobs:
             echo "Uploading $KEYBOARD_PDF to Google Drive..."
             python upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID"
 
-            # --- NEW: Upload Lyrics PDF ---
             echo "Uploading $LYRICS_PDF to Google Drive..."
             python upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID"
           done
