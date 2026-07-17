@@ -2,13 +2,18 @@
 {artist: JääBoiler}
 {key: G}
 {tempo: 77}
-{define: Eb base-fret 6 frets X 1 3 3 3 X fingers X 1 3 3 3 X}
-{define: Eb/G base-fret 3 frets X X 3 1 2 1}
-{define: Bb/D base-fret 1 frets X X 0 3 3 1}
+{time: 4/4}
+{define: Eb}
+{define: Eb/G}
+{define: Bb/D}
+{define-guitar: Eb base-fret 6 frets X 1 3 3 3 X fingers X 1 3 3 3 X}
+{define-guitar: Eb/G base-fret 3 frets X X 3 1 2 1}
+{define-guitar: Bb/D base-fret 1 frets X X 0 3 3 1}
 {comment: Intro}
 [G] [C] [D] [G]
-x4
+[*4×]
 
+{start_of_verse: label="Salm 1"}
 Kaks [G]tüdrukut [C]lähevad [D]puiestee [G]tänaval
 aega on [C]palju nad [D]jõuavad [G]küll
 [G]Kus te küll [C]käisite [D]kellega [G]laulsite
@@ -18,9 +23,11 @@ ilusad [C]tüdrukud [D]silmad täis [G]tuld
 kõpsumas [C]kingad ja [D]järel teil [G]tuul
 [G]Ma olen [C]viimastel [D]päevadel [G]halvasti
 tundnud end [C]mul pole [D]öösiti [G]und
+{end_of_verse}
 
 {comment: Vahemäng 16 takti}
 
+{start_of_verse: label="Salm 2"}
 [G]Puiestee [C]tänaval [D]ongi üks [G]puiestee
 siis kui ka [C]puudest on [D]alles vaid [G]känd
 [G]Mis teie [C]nimed on [D]ilusad [G]tüdrukud
@@ -28,7 +35,8 @@ sajand saab [C]läbi ja [D]siis algab [G]uus
 
 Kaks [G]tüdrukut [C]lähevad [D]puiestee [G]tänaval
 aega on [C]palju nad [D]jõuavad [Eb]küll
+{end_of_verse}
 
 {comment: Outro}
 [Eb] [Eb] [Eb] [Eb] [Eb/G] [Abmaj7] [Bb/D] [Bb/D]
-...
+[*...]

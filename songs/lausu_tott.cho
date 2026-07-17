@@ -2,6 +2,7 @@
 {artist: nublu & Vaiko Eplik}
 {key: Eb}
 {tempo: 120}
+{time: 4/4}
 
 {comment: 4/4 · iga akord 1 takt}
 
@@ -9,7 +10,7 @@
 [Ab] [Bb] [Eb] [Cm]
 [Ab] [Bb] [Eb] [Cm]
 
-{start_of_verse: Salm 1}
+{start_of_verse: label="Salm 1"}
 [Ab]ütle, et suitsu[Bb]pääsud
 [Eb]seekord jäävad[Cm]ki
 [Ab]luba, et [Bb]päike
@@ -21,7 +22,7 @@ korda mul [Bb]veel
 et homme on ka[Eb] päev [Cm]
 {end_of_verse}
 
-{start_of_chorus: Refrään}
+{start_of_chorus: label="Refrään"}
 [Ab]lausu tõtt, kuid mitte [Bb]täit
 nii petta saan vaid poole[Eb]ga
 ma tunnen lihtsam on nii[Cm]
@@ -36,7 +37,7 @@ ma olen jätkuvalt siin[Cm]
 ei kadununud kuhugi[Ab]
 {end_of_chorus}
 
-{start_of_verse: Salm 2}
+{start_of_verse: label="Salm 2"}
 ikka siin
 ikka parem, kui varem
 kui olin arem

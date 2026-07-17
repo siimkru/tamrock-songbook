@@ -9,6 +9,7 @@
         "decapo": true
     },
     "diagrams": {
+        "show": "none",
         "sorted": true
     },
     "pdf": {
@@ -59,13 +60,13 @@
             }
         },
         "diagrams": {
-            "show": "below"
+            "show": "none"
         },
         "formats": {
             "title": {
                 "subtitle": [
                     "",
-                    "%{artist} · Helistik: %{key} · Tempo: %{tempo} BPM",
+                    "%{artist} · Helistik: %{_key} · Tempo: %{tempo} BPM",
                     ""
                 ]
             },

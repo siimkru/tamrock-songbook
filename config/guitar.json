@@ -1,4 +1,7 @@
 {
+    "instrument": {
+        "type": "guitar"
+    },
     "settings": {
         "truesf": true,
         "columns": 2,
@@ -73,7 +76,7 @@
             "title": {
                 "subtitle": [
                     "",
-                    "%{artist} · Helistik: %{key} · Tempo: %{tempo} BPM",
+                    "%{artist} · Helistik: %{_key} · Tempo: %{tempo} BPM",
                     ""
                 ]
             },

@@ -2,50 +2,53 @@
 {artist: Ummamuudu}
 {key: Dm}
 {tempo: 120}
+{time: 4/4}
+{define: C/B}
+{define: C/Bb}
 
 {comment: Intro}
 [Dm] [Bb] [C] [Dm]  
 [Dm] [Bb] [C] [Dm]  
 
-{start_of_verse Salm 1}
+{start_of_verse: label="Salm 1"}
 Välän [Dm]külmetas ja taivast satas [Bb]lummõ
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 2}
+{start_of_verse: label="Salm 2"}
 Välän [Dm]külmetas ja taivast satas [Bb]lummõ
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 3}
+{start_of_verse: label="Salm 3"}
 Hamõ [Dm]õhukõ, su sälän prunts om [Bb]tummõ
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 4}
+{start_of_verse: label="Salm 4"}
 Hamõ [Dm]õhukõ, su sälän prunts om [Bb]tummõ
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 5}
+{start_of_verse: label="Salm 5"}
 [Dm]Hammõst läbi paistus rõnnakõnõ [Bb]kummõr  
-Ütle [C]mullõ[/C][/B][/Bb][A7] uma telefoni[Dm]nummõr
+Ütle [C]mullõ[C/B][C/Bb][A7] uma telefoni[Dm]nummõr
 {end_of_verse}
 
 {comment: 9 takti soolo}
 [Dm] [Bb] [C] [Dm]  
 
-{start_of_verse Salm 6}
+{start_of_verse: label="Salm 6"}
 Sis meil [Dm]tulõva Fiesta ja Rock [Bb]Summõr
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 7}
+{start_of_verse: label="Salm 7"}
 Sis meil [Dm]tulõva Fiesta ja Rock [Bb]Summõr
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 8}
+{start_of_verse: label="Salm 8"}
 Sis ku [Dm]kulmetas ja välän satas [Bb]lummõ
 Ütle [C]mullõ uma telefoni[Dm]nummõr
 {end_of_verse}
-{start_of_verse Salm 9}
+{start_of_verse: label="Salm 9"}
 Sis ku [Dm]kulmetas ja välän satas [Bb]lummõ
-Ütle [C]mullõ[/C][/B][/Bb][A7] uma telefoni[Dm]
+Ütle [C]mullõ[C/B][C/Bb][A7] uma telefoni[Dm]
 {end_of_verse}
 
 {comment: outro}

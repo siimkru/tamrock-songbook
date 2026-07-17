@@ -2,40 +2,50 @@
 {artist: Ruja}
 {key: E}
 {tempo: 163}
-{define: B/E base-fret 1 frets 0 2 4 4 4 2 fingers 0 1 3 3 3 1}
-{define: G#5 base-fret 4 frets 1 3 3 X X X}
-{define: E5 base-fret 7 frets X 1 3 3 X X}
-{define: A5 base-fret 5 frets 1 3 3 X X X}
-{define: C#5 base-fret 4 frets X 1 3 3 X X}
-{define: D5 base-fret 5 frets X 1 3 3 X X}
-{define: A/E base-fret 1 frets 0 0 2 2 2 0 fingers 0 0 1 1 1 0}
-{define: E/G# base-fret 1 frets 4 2 2 1 0 0}
-{define: E/B base-fret 1 frets X 2 2 1 0 0}
+{time: 4/4}
+{define: B/E}
+{define: G#5}
+{define: E5}
+{define: A5}
+{define: C#5}
+{define: D5}
+{define: A/E}
+{define: E/G#}
+{define: E/B}
+{define-guitar: B/E base-fret 1 frets 0 2 4 4 4 2 fingers 0 1 3 3 3 1}
+{define-guitar: G#5 base-fret 4 frets 1 3 3 X X X}
+{define-guitar: E5 base-fret 7 frets X 1 3 3 X X}
+{define-guitar: A5 base-fret 5 frets 1 3 3 X X X}
+{define-guitar: C#5 base-fret 4 frets X 1 3 3 X X}
+{define-guitar: D5 base-fret 5 frets X 1 3 3 X X}
+{define-guitar: A/E base-fret 1 frets 0 0 2 2 2 0 fingers 0 0 1 1 1 0}
+{define-guitar: E/G# base-fret 1 frets 4 2 2 1 0 0}
+{define-guitar: E/B base-fret 1 frets X 2 2 1 0 0}
 {comment: Intro}
 
 [E]
 
-{start_of_verse: Salm 1}
+{start_of_verse: label="Salm 1"}
 Käib [A/E]läbi [B/E]suve [E]aedades
 üks [A/E]küpse[B/E]mise [E]laul.
 Siin [A]hernes [B]küpseb [E]kaunades
 ja [A]varre [B]otsas [E]õun.
 {end_of_verse}
 
-{start_of_bridge}
+{start_of_bridge: label="Vaheosa"}
 Ladva[C#m]õuna[G#m]na siis [A]hea on kasvada,[E]
 kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 {end_of_bridge}
 
-{start_of_verse: Salm 2}
+{start_of_verse: label="Salm 2"}
 On [A/E]puude [B/E]juured [E]mulla sees
 ja [A/E]juurte [B/E]sees on [E]jõud.
 Ja [A]jõud on [B]päikeses, [E]vihmavees,
 puid [A]jõuet[B]uks teeb [E]põud.
 {end_of_verse}
 
-{start_of_bridge}
+{start_of_bridge: label="Vaheosa"}
 Ladva[C#m]õuna[G#m]na siis [A]hea on kasvada,[E]
 kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
@@ -43,10 +53,12 @@ ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 
 [E] [D5] [C#5] [A5] [E] [D5] [C#5] [A5] [A5] [G#5] [E]
 
-{start_of_chorus}
-Eks [A]hernest [E/B]uba ju [B]kaitse ta kaun,[E] [E/G#]
+{start_of_chorus: label="Refrään"}
+Eks [A]hernest [E/B]uba ju [B]kaitse ta kaun,[E]
+[E/G#]
 kuid [A]varre [E/B]otsas on [B]küpsemas õun.[E]
-On [A]õunal [E/B]süda ja [B]seemned seal sees.[E] [E/G#]
+On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
+[E/G#]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
 {end_of_chorus}
 
@@ -62,37 +74,42 @@ Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
 [C#m] [G#m]
 [F#m] [A] [B] [E]
 
-{start_of_verse: Salm 3}
+{start_of_verse: label="Salm 3"}
 Ei [A/E]olla [B/E]suuda [E]iga mees
 siin [A/E]ilmas [B/E]ladva[E]õun.
 Jääb [A]seeme [B]tooreks [E]südames,
 kui [A]huulil [B]vale [E]laul.
 {end_of_verse}
 
-{start_of_bridge}
+{start_of_bridge: label="Vaheosa"}
 Ladva[C#m]õuna[G#m]na siis [A]hea on kasvada,[E]
 kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 {end_of_bridge}
 
-{start_of_chorus}
+{start_of_chorus: label="Refrään"}
 Eks [A]hernest [E/B]uba ju [B]kaitse ta kaun,[E] [E/G#]
 kuid [A]varre [E/B]otsas on [B]küpsemas õun.[E]
-Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E] [E/G#]
+Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
+[E/G#]
 Ja [A]kuskil [E/B]ootel on [B]linnatäis suid.[E]
 {end_of_chorus}
 
-{start_of_chorus: Instr}
-On [A]õunal [E/B]süda ja [B]seemned seal sees.[E] [E/G#]
+{start_of_chorus: label="Instrumentaal"}
+On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
+[E/G#]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
-Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E] [E/G#]
+Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
+[E/G#]
 Ja [A]kuskil [E/B]ootel on [B]linnatäis suid.[E]
 {end_of_chorus}
 
-{start_of_chorus}
-On [A]õunal [E/B]süda ja [B]seemned seal sees.[E] [E/G#]
+{start_of_chorus: label="Refrään"}
+On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
+[E/G#]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
-Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E] [E/G#]
+Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
+[E/G#]
 Ja [A]kuskil [E/B]ootel on [F#m]linnatäis,
 [A]linnatäis, [B]linnatäis [E]suid.
 {end_of_chorus}

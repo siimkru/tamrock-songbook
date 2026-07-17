@@ -2,28 +2,31 @@
 {artist: Peeter Tooma}
 {key: Bb}
 {tempo: 95}
+{time: 4/4}
 
-{define: Bb/F base-fret 1 frets 1 1 3 3 3 1 fingers 1 1 3 3 3 1}
-{define: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
+{define: Bb/F}
+{define: F/C}
+{define-guitar: Bb/F base-fret 1 frets 1 1 3 3 3 1 fingers 1 1 3 3 3 1}
+{define-guitar: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
 
 {comment: Intro}
 [Bb] [Eb] [Bb] [Eb]
 
-{start_of_verse: Salm 1}
+{start_of_verse: label="Salm 1"}
 [Bb]Ühel [Eb]seikleval [Bb]priiuse[Bb/F]rüütlil
 [Bb]olgu [Bb/F]pistoda [F]alati [Bb]vööl
 või [Bbmaj7]peitku [Eb]ennast [Bb]hoopis ta [Bb/F]põues,
 [Bb]nii on [F]kindlamgi [Bb]veel.
 {end_of_verse}
 
-{start_of_verse: Salm 2}
+{start_of_verse: label="Salm 2"}
 [Cm]See relv on ka [F7]imelik [Bb]talisman,
 mis [Eb]hoiab sind [Ab]päeval ja [Db]ööl
 ja [F]lõikab [F7]läbi kõik [Bb]kütked, [Gm]kütked,
 [F/C]millesse [C7]satud sa [F]teel. [F7]
 {end_of_verse}
 
-{start_of_verse: Salm 3}
+{start_of_verse: label="Salm 3"}
 [Bb]Ta jätab [Eb]terveks, [Bb]terveks vaid [Bb/F]kütked,
 mis [Bb]hoidmas [Bb/F]teda [F]sinu [Bb]vööl.
 Neid [Bbmaj7]kütkeid [Eb]läbi [Bb]tema ei [Bb/F]lõika,
@@ -43,21 +46,21 @@ Mis on tema õige hind
 ja kas ta jääb või kaob
 {end_of_textblock}
 
-{start_of_verse: Salm 4}
+{start_of_verse: label="Salm 4"}
 [Bb]Ühel [Eb]seikleval [Bb]priiuse[Bb/F]rüütlil
 [Bb]olgu [Bb/F]pistoda [F]alati [Bb]vööl
 või [Bbmaj7]peitku [Eb]ennast [Bb]hoopis ta [Bb/F]põues,
 [Bb]nii on [F]kindlamgi [Bb]veel.
 {end_of_verse}
 
-{start_of_verse: Salm 5}
+{start_of_verse: label="Salm 5"}
 [Cm]See relv on ka [F7]imelik [Bb]talisman,
 mis [Eb]hoiab sind [Ab]päeval ja [Db]ööl
 ja [F]lõikab [F7]läbi kõik [Bb]kütked, [Gm]kütked,
 [F/C]millesse [C7]satud sa [F]teel. [F7]
 {end_of_verse}
 
-{start_of_verse: Salm 6}
+{start_of_verse: label="Salm 6"}
 [Bb]Ta jätab [Eb]terveks, [Bb]terveks vaid [Bb/F]kütked,
 mis [Bb]hoidmas [Bb/F]teda [F]sinu [Bb]vööl.
 Neid [Bbmaj7]kütkeid [Eb]läbi [Bb]tema ei [Bb/F]lõika,
