@@ -2,6 +2,7 @@
 {artist: Ursula}
 {key: C}
 {tempo: 67}
+{define: F#5 base-fret 2 frets 1 3 3 X X X}
 {comment-guitar: Terve loo vältel peaks kõik akordid mängida [Em]/[E] kujuliste barre-akordidena.}
 {comment: Intro}
 [C] [Am] [F] [G]
@@ -27,7 +28,7 @@
 [C]silmad [Am]maha löön, [F]ja taskust [G]vahvleid söön.
 {end_of_verse}
 {start_of_chorus}
-[F#]Ja ma [F]nutan end [G]puruks
+[F#5]Ja ma [F]nutan end [G]puruks
 [C]sest et [Am]ta
 [F]jälle [G]tantsib [C]Heikiga [Am]
 [F]jälle [G]tantsib [C]Heikiga [Am]
