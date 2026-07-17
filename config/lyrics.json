@@ -22,18 +22,14 @@
         },
         "formats": {
             "title": {
-                "footer": [
-                    "%{artist}",
-                    "%{title}",
-                    "%{page}/%{pages}"
+                "subtitle": [
+                    "",
+                    "%{artist} · Helistik: %{key} · Tempo: %{tempo} BPM",
+                    ""
                 ]
             },
             "default": {
-                "footer": [
-                    "%{artist}",
-                    "%{title}",
-                    "%{page}/%{pages}"
-                ]
+                "footer": false
             }
         }
     }
