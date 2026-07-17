@@ -21,9 +21,10 @@
 {define-guitar: A/E base-fret 1 frets 0 0 2 2 2 0 fingers 0 0 1 1 1 0}
 {define-guitar: E/G# base-fret 1 frets 4 2 2 1 0 0}
 {define-guitar: E/B base-fret 1 frets X 2 2 1 0 0}
-{comment: Intro}
-
-[E]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="1"}
+|| E ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 Käib [A/E]läbi [B/E]suve [E]aedades
@@ -51,7 +52,12 @@ kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 {end_of_bridge}
 
-[E] [D5] [C#5] [A5] [E] [D5] [C#5] [A5] [A5] [G#5] [E]
+{comment-vocals: Vahemäng}
+{start_of_grid label="Vahemäng" shape="4"}
+|| E | D5 | C#5 | A5 |
+|  E | D5 | C#5 | A5 |
+|  A5 | G#5 | E | . ||
+{end_of_grid}
 
 {start_of_chorus: label="R"}
 Eks [A]hernest [E/B]uba ju [B]kaitse ta kaun,[E]
@@ -62,17 +68,20 @@ On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
 {end_of_chorus}
 
-{comment: Instrumentaal}
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5]
-[E5] [D5] [C#5] [A5] [A5] [G#5] [E5]
-[C#m] [G#m]
-[F#m] [A] [B] [E]
+{comment-vocals: Instrumentaal}
+{start_of_grid label="Instrumentaal" shape="4"}
+|| E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  E5 | D5 | C#5 | A5 |
+|  A5 | G#5 | E5 | . |
+|  C#m | G#m | . | . |
+|  F#m | A | B | E ||
+{end_of_grid}
 
 {start_of_verse: label="S3"}
 Ei [A/E]olla [B/E]suuda [E]iga mees

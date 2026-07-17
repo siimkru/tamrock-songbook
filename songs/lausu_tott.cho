@@ -4,11 +4,11 @@
 {tempo: 120}
 {time: 4/4}
 
-{comment: 4/4 · iga akord 1 takt}
-
-{comment: Intro}
-[Ab] [Bb] [Eb] [Cm]
-[Ab] [Bb] [Eb] [Cm]
+{comment-vocals: Intro · iga akord 1 takt}
+{start_of_grid label="Intro · iga akord 1 takt" shape="4"}
+|| Ab | Bb | Eb | Cm |
+|  Ab | Bb | Eb | Cm ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 [Ab]ütle, et suitsu[Bb]pääsud
@@ -50,7 +50,9 @@ on valugi ja vaevu
 ka praegu
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 
-{comment: Outro}
-[Ab] [Bb] [Eb] [Cm]
+{comment-vocals: Outro}
+{start_of_grid label="Outro" shape="4"}
+|| Ab | Bb | Eb | Cm ||
+{end_of_grid}

@@ -3,12 +3,13 @@
 {key: D}
 {tempo: 153}
 {time: 4/4}
-{comment: Intro}
-
-[D] [G] [A] [D]
-[D] [G] [A] [D]
-[D] [G] [A] [D]
-[D] [G] [A] [D]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="4"}
+|| D | G | A | D |
+|  D | G | A | D |
+|  D | G | A | D |
+|  D | G | A | D ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 [D]Tüdruk vaatab [A]lille, [D]lill kasvab [G]rohus
@@ -23,12 +24,13 @@
 [G]lilleke [D]rohus, [A]aaaa...
 {end_of_chorus}
 
-{comment: Vahemäng}
-
-[D] [G] [A] [D]
-[D] [G] [A] [D]
-[D] [G] [A] [D]
-[D] [G] [A] [D]
+{comment-vocals: Vahemäng}
+{start_of_grid label="Vahemäng" shape="4"}
+|| D | G | A | D |
+|  D | G | A | D |
+|  D | G | A | D |
+|  D | G | A | D ||
+{end_of_grid}
 
 {start_of_verse: label="S2"}
 [D]Tüdruk vaatab [A]lille, [D]ei märka, et [G]ohus
@@ -36,15 +38,17 @@
 [D]Tüdruk vaatab [A]lille, [D]ei lill kasva [G]rohus
 [A]ja miskit ei [D]taipa [A] [G]ses [A]tohuvab[D]ohus
 {end_of_verse}
-{chorus}
+{chorus: label="R"}
 
-{comment: Vahemäng}
-[Bm] [G] [A] [D]
-[G] [D] [A]
-[Bm] [G] [A] [D]
-[G] [D] [A]
+{comment-vocals: Vahemäng}
+{start_of_grid label="Vahemäng" shape="4"}
+|| Bm | G | A | D |
+|  G | D | A | . |
+|  Bm | G | A | D |
+|  G | D | A | . ||
+{end_of_grid}
 
-{chorus}
+{chorus: label="R"}
 
 {start_of_verse: label="S3"}
 [D]Tüdruk vaatab [A]lille, [D]lill kasvab [G]rohus
@@ -53,5 +57,5 @@
 [A]on tema ja [D]maailm [A] [G]ja [A]lilleke [D]rohus
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 [D]

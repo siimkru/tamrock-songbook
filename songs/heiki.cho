@@ -8,9 +8,11 @@
 {define-guitar: F#5 base-fret 2 frets 1 3 3 X X X}
 {define-guitar: B5 base-fret 2 frets X 1 3 3 X X}
 {comment-guitar: Terve loo vältel peaks kõik akordid mängida [Em]/[E] kujuliste barre-akordidena.}
-{comment: Intro}
-[C] [Am] [F] [G]
-[C] [Am] [F] [G]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="4"}
+|| C | Am | F | G |
+|  C | Am | F | G ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 [C]Istun [Am]üksinda, [F]teised [G]tantsivad,
@@ -27,7 +29,7 @@
 {start_of_verse: label="S2"}
 [C]Pühin [Am]pisara, [F]võtan [G]vasara
 [C]nutan [Am]üksinda, [F]teised ei [G]nuta.
-{comment: Vox 2}
+{comment-vocals: Vox 2}
 [C]Pilgud [Am]kohtuvad, [F]süda [G]seisatab
 [C]silmad [Am]maha löön, [F]ja taskust [G]vahvleid söön.
 {end_of_verse}
@@ -45,6 +47,7 @@ tantsib [G]Heikiga Heikiga [C]jälle
 [Am]Heikiga [F]Heikiga [G]...
 {end_of_chorus}
 
-{comment: Outro}
-[C] [Am] [F] [G]
-[*...]
+{comment-vocals: Outro}
+{start_of_grid label="Outro" shape="0+4+1"}
+|| C | Am | F | G :| ...
+{end_of_grid}

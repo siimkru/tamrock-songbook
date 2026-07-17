@@ -4,8 +4,10 @@
 {tempo: 134}
 {time: 4/4}
 
-{comment: Intro}
-[D]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="1"}
+|| D ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 Ja minu najal vaid [C]seisab
@@ -19,7 +21,7 @@ Kui tahan [D]peatub lõvi tallena siin
 kui tahan [C]kõik kolm karu minema viin
 kui tahan [G]nööri mööda rahvakunstnik [D]käib
 {end_of_chorus}
-{chorus}
+{chorus: label="R"}
 
 {start_of_verse: label="S2"}
 Ma oma andeid ei [C]peida,
@@ -28,18 +30,19 @@ Ei enne sulepead [C]heida,
 kui plaanid täis kõik [G]saan
 {end_of_verse}
 
-{chorus}
-{chorus}
+{chorus: label="R"}
+{chorus: label="R · korda"}
 
-{comment: Instrumental}
+{comment-vocals: Instrumentaal}
+{start_of_grid label="Instrumentaal" shape="4"}
+|| C | G | C | G |
+|  D | C | G | D |
+|  D | C | G | D ||
+{end_of_grid}
 
-[C] [G] [C] [G]
-[D] [C] [G] [D]
-[D] [C] [G] [D]
 
-
-{chorus}
-{chorus}
+{chorus: label="R"}
+{chorus: label="R · korda"}
 
 {start_of_verse: label="Tr"}
 peatub siin, peatub lõvi siin
@@ -51,7 +54,7 @@ kaasa viin, karu kaasa viin
 mööda käib, lase käib lase käib
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 
 [D]peatub siin, peatub lõvi siin
 [C]kaasa viin, karu kaasa viin

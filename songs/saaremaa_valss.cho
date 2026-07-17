@@ -14,8 +14,11 @@
 {define-guitar: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
 {define-guitar: A7/E base-fret 1 frets 0 0 2 0 2 0}
 {comment-guitar: Kõik vahemängud pikemad e. nagu intro}
-{comment: Intro}
-[F] [F/A] [C7] [F] [F] [F/A] [Bb] [C]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="4"}
+|| F | F/A | C7 | F |
+|  F | F/A | Bb | C ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 Seal [F]laupäeva[F/C]õhtuselt [C7]lõhnavad [C7/G]kased,
@@ -40,7 +43,7 @@ Miks [A7/E]muidu su [A7]huuled ja [Dm]õhetav [Gm/Bb]pale
 nii [Bbm]õunapuu[F/C]õiele [G7]sarnane [C7]näib!
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 
 {start_of_verse: label="S3"}
 Oi, [F]Saaremaa [F/C]niitude [C7]kastesed [C7/G]süled,
@@ -49,7 +52,7 @@ On [A7/E]pilvedest [A7]helendav [Dm]taevas su [Gm/Bb]üle,
 ja [Bbm]kirgliku [F/C]suudluse [G7]esmane [C7]hurm!
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 
 {start_of_verse: label="S4"}
 Just [F]sellisel [F/C]heinamaal [C7]peamegi [C7/G]pidu,

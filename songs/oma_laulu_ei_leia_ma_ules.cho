@@ -9,8 +9,10 @@
 {define-guitar: Em/F# base-fret 1 frets 2 2 2 0 0 0 fingers 1 1 1 0 0 0}
 {define-guitar: Em/G base-fret 1 frets 3 2 2 0 0 0}
 {define-guitar: D/F# base-fret 1 frets 2 0 0 2 3 2}
-{comment: Intro}
-[Em] [Bm]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="2"}
+|| Em | Bm ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 Üle [Em]vainude [Bm]valendav [Em]aur, [Bm]
@@ -33,7 +35,7 @@ ja nad [G]tulevad [D]männiku[G]mäelt, [D]
 kõige [G]viimane [D]udus veel [Em]ujub.  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 
 {start_of_verse: label="S3"}
 Minu [Em]laule vist [Bm]teavad siin [Em]kõik,  [Bm]
@@ -42,7 +44,7 @@ Kuna [G]kõik nad siit [D]karjamaalt [G]sõid,  [D]
 nüüd üks [G]vallatu [D]plehku on [Em]pannud!  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
 
-{chorus}
+{chorus: label="R"}
 
 {start_of_verse: label="S4"}
 Üle [Em]vainude [Bm]valendav [Em]aur,  [Bm]
@@ -51,8 +53,10 @@ Iga[G]ühel on [D]siin oma [G]laul,  [D]
 ja ma [G]oma ei [D]leiagi [Em]üles.  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
 
-{chorus}
-{chorus}
+{chorus: label="R"}
+{chorus: label="R · korda"}
 
-{comment: Outro, viiuli soolo}
-[Em] [Bm]
+{comment-vocals: Outro · viiuli soolo}
+{start_of_grid label="Outro · viiuli soolo" shape="2"}
+|| Em | Bm ||
+{end_of_grid}

@@ -9,8 +9,10 @@
 {define-guitar: Bb/F base-fret 1 frets 1 1 3 3 3 1 fingers 1 1 3 3 3 1}
 {define-guitar: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
 
-{comment: Intro}
-[Bb] [Eb] [Bb] [Eb]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="4"}
+|| Bb | Eb | Bb | Eb ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 [Bb]Ühel [Eb]seikleval [Bb]priiuse[Bb/F]rüütlil
@@ -33,7 +35,10 @@ Neid [Bbmaj7]kütkeid [Eb]läbi [Bb]tema ei [Bb/F]lõika,
 sest [Bb]nii on [F]kindlamgi [Bb]veel. [Eb] [Bb] [Eb]
 {end_of_verse}
 
-[Bb] [Eb] [Bb] [Eb]
+{comment-vocals: Vahemäng}
+{start_of_grid label="Vahemäng" shape="4"}
+|| Bb | Eb | Bb | Eb ||
+{end_of_grid}
 
 {start_of_textblock align=left flush=left}
 Kust on ta sinu kätte jõudnud,
@@ -67,8 +72,10 @@ Neid [Bbmaj7]kütkeid [Eb]läbi [Bb]tema ei [Bb/F]lõika,
 sest [Bb]nii on [F]kindlamgi [Bb]veel.
 {end_of_verse}
 
-{comment: Outro}
-[Bb] [Eb] [Bb] [Eb]
+{comment-vocals: Outro}
+{start_of_grid label="Outro" shape="4"}
+|| Bb | Eb | Bb | Eb ||
+{end_of_grid}
 
 {comment-guitar: [Eb] asemel võib mängida [Ebmaj7]}
 {chord-guitar: Ebmaj7}

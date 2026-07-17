@@ -6,9 +6,11 @@
 {define: C/B}
 {define: C/Bb}
 
-{comment: Intro}
-[Dm] [Bb] [C] [Dm]  
-[Dm] [Bb] [C] [Dm]  
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="4"}
+|| Dm | Bb | C | Dm |
+|  Dm | Bb | C | Dm ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 Välän [Dm]külmetas ja taivast satas [Bb]lummõ
@@ -31,8 +33,10 @@ Hamõ [Dm]õhukõ, su sälän prunts om [Bb]tummõ
 Ütle [C]mullõ[C/B][C/Bb][A7] uma telefoni[Dm]nummõr
 {end_of_verse}
 
-{comment: 9 takti soolo}
-[Dm] [Bb] [C] [Dm]  
+{comment-vocals: Soolo · 9 takti}
+{start_of_grid label="Soolo · 9 takti" shape="4"}
+|| Dm | Bb | C | Dm ||
+{end_of_grid}
 
 {start_of_verse: label="S6"}
 Sis meil [Dm]tulõva Fiesta ja Rock [Bb]Summõr
@@ -51,6 +55,8 @@ Sis ku [Dm]kulmetas ja välän satas [Bb]lummõ
 Ütle [C]mullõ[C/B][C/Bb][A7] uma telefoni[Dm]
 {end_of_verse}
 
-{comment: outro}
-[Dm] [Bb] [C] [Dm]  
-[Dm] [Bb] [C] [Dm] 
+{comment-vocals: Outro}
+{start_of_grid label="Outro" shape="4"}
+|| Dm | Bb | C | Dm |
+|  Dm | Bb | C | Dm ||
+{end_of_grid}

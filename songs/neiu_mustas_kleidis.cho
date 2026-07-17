@@ -4,9 +4,11 @@
 {tempo: 125}
 {time: 4/4}
 
-{comment: Intro}
-[F#m]
-[A] [E] [G] [D]
+{comment-vocals: Intro}
+{start_of_grid label="Intro" shape="4"}
+|| F#m | A | E | G |
+|  D | . | . | . ||
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 [F#m]On tähine taevas, mustavas öös
@@ -23,18 +25,20 @@ kes, [E]jalgades tuul,
 [A]tantsi veel,[C#7] tantsi veel!
 [F#m]Neiu mustas [D]kleidis... [A] [C#7]
 {end_of_chorus}
-{chorus}
-{comment: Instrumental}
-[F#m]
-[A] [E] [G] [D]
+{chorus: label="R · korda"}
+{comment-vocals: Instrumentaal}
+{start_of_grid label="Instrumentaal" shape="4"}
+|| F#m | A | E | G |
+|  D | . | . | . ||
+{end_of_grid}
 
 {start_of_verse: label="S2"}
 [F#m]Kui rahuneb rütm ja trummide hääl
 ma tantsival neiul haaran [A]kinni käest,
 kuid [E]pudeneb koost [G]meid öösel sidunud [D]roos.
 {end_of_verse}
-{chorus}
-{chorus}
+{chorus: label="R"}
+{chorus: label="R · korda"}
 
 [F#m] [D] [A] [B] [C#7]
 [*Aaaaaa]
@@ -42,8 +46,8 @@ kuid [E]pudeneb koost [G]meid öösel sidunud [D]roos.
 [*Aaaaaa]
 [F#m] [D] [A] [B] [C#7]
 
-{chorus}
-{chorus}
+{chorus: label="R"}
+{chorus: label="R · korda"}
 
 [F#m] [D] [A] [C#7]
 [*Aaaaaa]
