@@ -88,13 +88,13 @@ jobs:
 
             # Upload all PDFs
             echo "Uploading $GUITAR_PDF to Google Drive..."
-            python upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID"
+            python upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID" "Kitarr"
 
             echo "Uploading $KEYBOARD_PDF to Google Drive..."
-            python upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID"
+            python upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID" "Klaver"
 
             echo "Uploading $LYRICS_PDF to Google Drive..."
-            python upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID"
+            python upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID" "Sõnad"
           done
 
       - name: Cleanup generated PDFs
