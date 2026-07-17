@@ -7,21 +7,21 @@
 {comment: Intro}
 [D]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 Ja minu najal vaid [C]seisab
 see terve tsirkus [G]koos
 Ma hoolsalt raamatuid [C]täidan
 areeni all bü[G]roos
 {end_of_verse}
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 Kui tahan [D]peatub lõvi tallena siin
 kui tahan [C]kõik kolm karu minema viin
 kui tahan [G]nööri mööda rahvakunstnik [D]käib
 {end_of_chorus}
 {chorus}
 
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 Ma oma andeid ei [C]peida,
 siin olen võimas [G]ma
 Ei enne sulepead [C]heida,
@@ -41,7 +41,7 @@ kui plaanid täis kõik [G]saan
 {chorus}
 {chorus}
 
-{start_of_verse: label="Trummid"}
+{start_of_verse: label="Tr"}
 peatub siin, peatub lõvi siin
 kaasa viin, karu kaasa viin
 mööda käib, nööri mööda käib

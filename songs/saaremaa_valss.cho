@@ -17,14 +17,14 @@
 {comment: Intro}
 [F] [F/A] [C7] [F] [F] [F/A] [Bb] [C]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 Seal [F]laupäeva[F/C]õhtuselt [C7]lõhnavad [C7/G]kased,
 kui [C7]nendesse [C7/G]vajutad [C7]hõõguva [F]näo.
 Ja [A7/E]pühapäev [A7]hinges sind [Dm]uskuda [Gm/Bb]laseb,
 et [Bbm]õnne vaid [F/C]kauguses [G7]kukuvad [C7]käod.
 {end_of_verse}
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 Oh, [F]keeruta, [C7]lennuta [F]linalakk[Dm]neidu,
 kel [Gm]silmist nii [C7]kelmikaid [F]sädemeid [F7]lööb!
 Ei [Bb]sellist küll [F]maailmas [C7]kusagil [Dm]leidu
@@ -33,7 +33,7 @@ kui [Bb]Saaremaa [F/C]heinamaad [C7]juunikuu [F]ööl...
 kui [Bb]Saaremaa [F/C]heinamaad [C7]juunikuu [F]ööl.
 {end_of_chorus}
 
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 Ning [F]hämaras [F/C]toomepuu [C7]lumena [C7/G]valev
 on [C7]sinule [C7/G]hõiskavaid [C7]ööbikuid [F]täis...
 Miks [A7/E]muidu su [A7]huuled ja [Dm]õhetav [Gm/Bb]pale
@@ -42,7 +42,7 @@ nii [Bbm]õunapuu[F/C]õiele [G7]sarnane [C7]näib!
 
 {chorus}
 
-{start_of_verse: label="Salm 3"}
+{start_of_verse: label="S3"}
 Oi, [F]Saaremaa [F/C]niitude [C7]kastesed [C7/G]süled,
 öö[C7]vaikuses [C7/G]lauludest [C7]helisev [F]nurm!
 On [A7/E]pilvedest [A7]helendav [Dm]taevas su [Gm/Bb]üle,
@@ -51,14 +51,14 @@ ja [Bbm]kirgliku [F/C]suudluse [G7]esmane [C7]hurm!
 
 {chorus}
 
-{start_of_verse: label="Salm 4"}
+{start_of_verse: label="S4"}
 Just [F]sellisel [F/C]heinamaal [C7]peamegi [C7/G]pidu,
 kus [C7]hämarik [C7/G]koidule [C7]ulatab [F]käe.
 On [A7/E]kõikide [A7]mõtteid ja [Dm]toiminguid [Gm/Bb]sidund
 see [Bbm]tööde ning [F/C]rõõmude[G7]küllane [C7]päev.
 {end_of_verse}
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 
 Oh, [F]keeruta, [C7]kudruta [F]kavalat [Dm]juttu,
 kuld[Gm]tärniga [C7]nooruke [F]sõjamees [F7]sa.

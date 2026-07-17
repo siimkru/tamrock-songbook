@@ -25,7 +25,7 @@
 
 [E]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 Käib [A/E]läbi [B/E]suve [E]aedades
 üks [A/E]küpse[B/E]mise [E]laul.
 Siin [A]hernes [B]küpseb [E]kaunades
@@ -38,7 +38,7 @@ kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 {end_of_bridge}
 
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 On [A/E]puude [B/E]juured [E]mulla sees
 ja [A/E]juurte [B/E]sees on [E]jõud.
 Ja [A]jõud on [B]päikeses, [E]vihmavees,
@@ -53,7 +53,7 @@ ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 
 [E] [D5] [C#5] [A5] [E] [D5] [C#5] [A5] [A5] [G#5] [E]
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 Eks [A]hernest [E/B]uba ju [B]kaitse ta kaun,[E]
 [E/G#]
 kuid [A]varre [E/B]otsas on [B]küpsemas õun.[E]
@@ -74,7 +74,7 @@ Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
 [C#m] [G#m]
 [F#m] [A] [B] [E]
 
-{start_of_verse: label="Salm 3"}
+{start_of_verse: label="S3"}
 Ei [A/E]olla [B/E]suuda [E]iga mees
 siin [A/E]ilmas [B/E]ladva[E]õun.
 Jääb [A]seeme [B]tooreks [E]südames,
@@ -87,7 +87,7 @@ kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 {end_of_bridge}
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 Eks [A]hernest [E/B]uba ju [B]kaitse ta kaun,[E] [E/G#]
 kuid [A]varre [E/B]otsas on [B]küpsemas õun.[E]
 Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
@@ -95,7 +95,7 @@ Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
 Ja [A]kuskil [E/B]ootel on [B]linnatäis suid.[E]
 {end_of_chorus}
 
-{start_of_chorus: label="Instrumentaal"}
+{start_of_chorus: label="Instr"}
 On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
 [E/G#]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
@@ -104,7 +104,7 @@ Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
 Ja [A]kuskil [E/B]ootel on [B]linnatäis suid.[E]
 {end_of_chorus}
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
 [E/G#]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]

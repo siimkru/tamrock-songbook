@@ -12,7 +12,7 @@
 [E] [A6] [E] [A6]
 [E] [A6] [E] [A6]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 Kaua [E]kaua[A6] olen [E]ma [A6]
 teinud [E]tööd,[A6] aeg on e[E]lada [A6]
 Liiga [E]kaua[A6] samad [E]näod [A6]
@@ -23,14 +23,14 @@ Käes on [E]aeg[A6] teele a[E]suda [A6]
 [E][A6] mm[E][A6] mm
 [E][A6] mm[E][A6]
 
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 Hoia [E]hoia[A6] mul [E]käest [A6]
 Las see [E]päev[A6] annab vas[E]tuseid [A6]
 Leia [E]leia[A6] üles [E]mäed [A6]
 Las [E]näeb[A6] kogu maa[E]ilm meid [A6]
 {end_of_verse}
 
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 [A]Päiksest kuum on [E]maantee
 Samu [Badd4]plaate kuula[C#m]me (ei-ei-ei-ei)
 [A]Lõputult on [E]aega
@@ -47,14 +47,14 @@ Nende [Badd4]hoolde end jäta[E]me
 [E][A6] mm[E][A6] mm
 [E][A6] mm[E][A6]
 
-{start_of_verse: label="Salm 3"}
+{start_of_verse: label="S3"}
 Naera [E]naera[A6] see [E]päev [A6]
 Meelde [E]jääb [A6]koos kui o[E]leme [A6]
 Naera [E]naera[A6] see [E]öö [A6]
 Läheb [E]mööda[A6] kuid ei u[E]nune [A6]
 {end_of_verse}
 
-{start_of_chorus: label="Refrään 2"}
+{start_of_chorus: label="R2"}
 [A]Päiksest kuum on [E]maantee
 Samu [Badd4]plaate kuula[C#m]me (ei-ei-ei-ei)
 [A]Lõputult on [E]aega
@@ -71,7 +71,7 @@ Nende [Badd4]hoolde end jäta[F#]me
 [F#] [A]
 [F#] [B]
 
-{start_of_chorus: label="Refrään 3"}
+{start_of_chorus: label="R3"}
 {comment: Ainult kitarr}
 [A]Päiksest kuum on [E]maantee
 Samu [Badd4]plaate kuula[C#m]me

@@ -10,13 +10,13 @@
 [D] [G] [A] [D]
 [D] [G] [A] [D]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 [D]Tüdruk vaatab [A]lille, [D]lill kasvab [G]rohus
 [A]ja tüdrukul [D]meeldib [G]see [A]lilleke [D]rohus
 [D]Tüdruk vaatab [A]lille, [D]mina tüdrukut [G]rohus
 [A]ja minule [D]meeldib [A] [G]see [A]lilleke [D]rohus
 {end_of_verse}
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 [Bm]Lilleke [G]rohus, [A]lilleke [D]rohus
 [G]lilleke [D]rohus, [A]aaaa...
 [Bm]Lilleke [G]rohus, [A]lilleke [D]rohus
@@ -30,7 +30,7 @@
 [D] [G] [A] [D]
 [D] [G] [A] [D]
 
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 [D]Tüdruk vaatab [A]lille, [D]ei märka, et [G]ohus
 [A]on tema ja [D]maailm [A] [G]ja [A]lilleke [D]rohus
 [D]Tüdruk vaatab [A]lille, [D]ei lill kasva [G]rohus
@@ -46,7 +46,7 @@
 
 {chorus}
 
-{start_of_verse: label="Salm 3"}
+{start_of_verse: label="S3"}
 [D]Tüdruk vaatab [A]lille, [D]lill kasvab [G]rohus
 [A]on tema ja [Bm]maailm [G]
 [A]on tema ja [Bm]maailm [G]

@@ -12,26 +12,26 @@
 [C] [Am] [F] [G]
 [C] [Am] [F] [G]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 [C]Istun [Am]üksinda, [F]teised [G]tantsivad,
 [C]vaatan [Am]tüdrukuid, [F]nad mind ei [G]vaata.
 [C]Ilus [Am]kleidike, [F]rohekas [G]veidike,
 [C]lilla [Am]šleffiga, [F]ta tantsib [G]Heikiga.
 {end_of_verse}
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 [F#5]Ja ma [F]nutan end [G]puruks
 [C]sest et [Am]ta
 [F]jälle [G]tantsib [C]Heikiga. [Am] [F] [G]
 {end_of_chorus}
 {comment: Trummid}
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 [C]Pühin [Am]pisara, [F]võtan [G]vasara
 [C]nutan [Am]üksinda, [F]teised ei [G]nuta.
 {comment: Vox 2}
 [C]Pilgud [Am]kohtuvad, [F]süda [G]seisatab
 [C]silmad [Am]maha löön, [F]ja taskust [G]vahvleid söön.
 {end_of_verse}
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 [F#5]Ja ma [F]nutan end [G]puruks
 [C]sest et [Am]ta
 [F]jälle [G]tantsib [C]Heikiga [Am]

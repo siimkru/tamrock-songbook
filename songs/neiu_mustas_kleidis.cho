@@ -8,7 +8,7 @@
 [F#m]
 [A] [E] [G] [D]
 
-{start_of_verse: label="Salm 1"}
+{start_of_verse: label="S1"}
 [F#m]On tähine taevas, mustavas öös
 on sündimisvaevas roos,
 mis [A]lahti lööb end [E]armunu peos,
@@ -18,7 +18,7 @@ Roos avab end mustas kleidis [A]neiu käes,
 kes, [E]jalgades tuul,
 [G]mind kutsub, naeratus [D]suul.
 {end_of_verse}
-{start_of_chorus: label="Refrään"}
+{start_of_chorus: label="R"}
 [F#m]Neiu mustas [D]kleidis,
 [A]tantsi veel,[C#7] tantsi veel!
 [F#m]Neiu mustas [D]kleidis... [A] [C#7]
@@ -28,7 +28,7 @@ kes, [E]jalgades tuul,
 [F#m]
 [A] [E] [G] [D]
 
-{start_of_verse: label="Salm 2"}
+{start_of_verse: label="S2"}
 [F#m]Kui rahuneb rütm ja trummide hääl
 ma tantsival neiul haaran [A]kinni käest,
 kuid [E]pudeneb koost [G]meid öösel sidunud [D]roos.
