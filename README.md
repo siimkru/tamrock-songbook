@@ -1,6 +1,6 @@
-# TamRock songbook
+# TAMROCK songbook
 
-ChordPro sources and instrument-specific layouts for the TamRock songbook.
+ChordPro sources and instrument-specific layouts for the TAMROCK songbook.
 Commits to `main` generate PDFs for changed songs and upload them to Google
 Drive through GitHub Actions.
 

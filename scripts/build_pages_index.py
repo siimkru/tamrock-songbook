@@ -60,15 +60,14 @@ def build_index(songs_dir: Path, output_dir: Path) -> None:
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rattalaagri bändi laulik kitarri, klaveri ja vokaali PDF-idega.">
-    <title>Rattalaagri laulik</title>
+    <meta name="description" content="TAMROCK laulik kitarri, klaveri ja vokaali PDF-idega.">
+    <title>TAMROCK laulik</title>
     <style>
       :root {{ color-scheme: light; font-family: system-ui, -apple-system, sans-serif; }}
       * {{ box-sizing: border-box; }}
       body {{ margin: 0; color: #17202a; background: #f4f6f7; }}
       header {{ padding: 2.5rem 1rem 2rem; color: white; background: #244b3c; text-align: center; }}
       h1 {{ margin: 0 0 .5rem; font-size: clamp(2rem, 7vw, 3.5rem); }}
-      header p {{ margin: 0; font-size: 1.05rem; opacity: .9; }}
       main {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; width: min(70rem, 100%); margin: auto; padding: 1.25rem; }}
       .song {{ padding: 1.25rem; border: 1px solid #d9e0dd; border-radius: .75rem; background: white; box-shadow: 0 2px 8px rgb(0 0 0 / 6%); }}
       h2 {{ margin: 0 0 1rem; font-size: 1.25rem; }}
@@ -86,8 +85,7 @@ def build_index(songs_dir: Path, output_dir: Path) -> None:
   </head>
   <body>
     <header>
-      <h1>Rattalaagri laulik</h1>
-      <p>Kitarr, klaver ja laulusõnad</p>
+      <h1>TAMROCK laulik</h1>
     </header>
     <main>
 {cards}

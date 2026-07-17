@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains the TamRock ChordPro songbook. Song sources live in `songs/` as `*.cho`; use lowercase, underscore-separated filenames such as `oma_laulu_ei_leia_ma_ules.cho`. Instrument-specific ChordPro configurations are in `config/` (`guitar.json`, `keyboard.json`, and `lyrics.json`). Google Drive utilities live in `scripts/`, and CI build/upload behavior is defined in `.github/workflows/main.yml`. Put generated PDFs in the ignored `build/` directory.
+This repository contains the TAMROCK ChordPro songbook. Song sources live in `songs/` as `*.cho`; use lowercase, underscore-separated filenames such as `oma_laulu_ei_leia_ma_ules.cho`. Instrument-specific ChordPro configurations are in `config/` (`guitar.json`, `keyboard.json`, and `lyrics.json`). Google Drive utilities live in `scripts/`, and CI build/upload behavior is defined in `.github/workflows/main.yml`. Put generated PDFs in the ignored `build/` directory.
 
 ## Build, Test, and Development Commands
 
