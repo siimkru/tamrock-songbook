@@ -1,95 +1,93 @@
 {title: Seitsme tuule poole}
-{artist: Taukar}
+{artist: Karl-Erik Taukar}
 {columns: 2}
 
-{comment: Laulu alustab kitarr ja drummid, peale esimest salmi tulevad kõik teised juurde}
+{comment: Laulu alustab kitarr ja trummid, peale esimest salmi tulevad kõik teised juurde}
 
 {comment: Intro}
 [E] [A] [E] [A]
 [E] [A] [E] [A]
 
 {start_of_verse Salm 1}
-[E]Kaua [A]kaua [E]olen [A]ma  
-[E]teinud [A]tööd, [E]aeg on [A]elada  
-[E]Liiga [A]kaua [E]samad [A]näod  
-[E]Käes on [A]aeg [E]teele [A]asuda  
+Kaua [E]kaua[A] olen [E]ma [A]
+teinud [E]tööd,[A] aeg on e[E]lada [A]
+Liiga [E]kaua[A] samad [E]näod [A]
+Käes on [E]aeg[A] teele a[E]suda
 {end_of_verse}
 
 {start_of_verse Salm 2}
-Hoia hoia mul käest  
-Las see päev annab vastuseid  
-Leia leia üles mäed  
-Las näeb kogu maailm meid  
+Hoia [E]hoia[A] mul [E]käest [A]
+Las see [E]päev[A] annab vas[E]tuseid [A]
+Leia [E]leia[A] üles [E]mäed [A]
+Las [E]näeb[A] kogu maa[E]ilm meid
 {end_of_verse}
 
 {start_of_chorus Refrään}
-[A]Päiksest kuum on [E]maantee  
-[B]Samu plaate kuu[C#m]lame (e-e-e-e) 
-[A]Lõputult on [E]aega  
-[B]End ei vaeva [E]asjata (ei-ei-ei-ei)
+[A]Päiksest kuum on [E]maantee
+Samu [B]plaate kuula[C#m]me (e-e-e)
+[A]Lõputult on [E]aega
+End ei [B]vaeva asjata [E](ei-ei-ei-ei)
   
-[A]Ei tee suuri [E]plaane  
-[B]Kui kokku saame  
-[C#m]Siis sõidame  (e-e-e-e)
-[A]Seitsme tuule [E]poole  
-[B]Nende hoolde end [E]jätame  
+[A]Ei tee suuri [E]plaane
+Kui kokku [B]saame
+Siis sõida[C#m]me (e-e-e)
+[A]Seitsme tuule [E]poole
+Nende [B]hoolde end jäta[E]me
 {end_of_chorus}
 
-
 {comment: Vahemäng}
-[A] [E]mm [A] [E]mm
-[A] [E]mm [A] [E]
-
+[E][A] mm[E][A] mm
+[E][A] mm[E][A]
 
 {start_of_verse Salm 3}
-Naera naera see päev  
+Naera naera see päev
 Meelde jääb koos kui oleme  
 Naera naera see öö  
 Läheb mööda kuid ei unune  
 {end_of_verse}
 
 {start_of_chorus Refrään 2}
-[A]Päiksest kuum on [E]maantee  
-[B]Samu plaate kuu[C#m]lame  
-[A]Lõputult on [E]aega  
-[B]End ei vaeva [E]asjata  
-[A]Ei tee suuri [E]plaane  
-[B]Kui kokku saame  
-[C#m]Siis sõidame  
-[A]Seitsme tuule [E]poole  
-[B]Nende hoolde end [F#]jätame  
+Päiksest kuum on maantee  
+Samu plaate kuulame
+Lõputult on aega  
+End ei vaeva asjata  
+Ei tee suuri plaane  
+Kui kokku saame  
+Siis sõidame
+Seitsme tuule poole  
+Nende hoolde end jäta[F#]me
 {end_of_chorus}
 
-[F#] [A] [A] 
-[F#] [F#] [B] 
+{comment: [F#] vahemäng}
+[F#] [A]
+[F#] [B]
 
 {start_of_chorus Refrään 3}
 {comment: Ainult kitarr}
-[A]Päiksest kuum on [E]maantee  
-[B]Samu plaate kuu[C#m]lame  
-[A]Lõputult on [E]aega  
-[B]End ei vaeva [E]asjata
+Päiksest kuum on maantee  
+Samu plaate kuulame
+Lõputult on aega  
+End ei vaeva asjata
 
-{comment: drummid pah pah pah ja kõik teised tulevad sisse}  
-[A]Ei tee suuri [E]plaane  
-[B]Kui kokku saame  
-[C#m]Siis sõidame  
-[A]Seitsme tuule [E]poole  
-[B]Nende hoolde end [E]jätame
+{comment: trummid pah pah pah ja kõik teised tulevad sisse}
+Ei tee suuri plaane  
+Kui kokku saame  
+Siis sõidame
+Seitsme tuule poole  
+Nende hoolde end jätame
 
-[A]Päiksest kuum on [E]maantee  
-[B]Samu plaate kuu[C#m]lame  
-[A]Lõputult on [E]aega  
-[B]End ei vaeva [E]asjata
+Päiksest kuum on maantee  
+Samu plaate kuulame
+Lõputult on aega  
+End ei vaeva asjata
 
-[A]Ei tee suuri [E]plaane  
-[B]Kui kokku saame  
-[C#m]Siis sõidame  
-[A]Seitsme tuule [E]poole  
-[B]Nende hoolde end [E]jätame[A]
+Ei tee suuri plaane  
+Kui kokku saame  
+Siis sõidame
+Seitsme tuule poole  
+Nende hoolde end jätame
 {end_of_chorus}
 
 {comment: Outro}
-[E] [A] [E] [A]
 [E] [A] [E] [A]
 [E] [A] [E] [A]
