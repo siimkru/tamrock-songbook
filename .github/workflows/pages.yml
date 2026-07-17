@@ -1,0 +1,90 @@
+name: Build and Deploy GitHub Pages Songbook
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "songs/*.cho"
+      - "config/guitar.json"
+      - "config/keyboard.json"
+      - "config/lyrics.json"
+      - "scripts/build_pages_index.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Render all song PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+
+          songs=(songs/*.cho)
+          if (( ${#songs[@]} == 0 )); then
+            echo "No ChordPro songs found in songs/" >&2
+            exit 1
+          fi
+
+          mkdir -p build/pages
+
+          for song in "${songs[@]}"; do
+            basename="$(basename "$song" .cho)"
+
+            docker run --rm \
+              -v "$(pwd):/app" -w /app --user "$(id -u):$(id -g)" \
+              chordpro/chordpro chordpro \
+              --config=config/guitar.json \
+              --output="build/pages/${basename}-Kitarr.pdf" "$song"
+
+            docker run --rm \
+              -v "$(pwd):/app" -w /app --user "$(id -u):$(id -g)" \
+              chordpro/chordpro chordpro \
+              --config=config/keyboard.json \
+              --output="build/pages/${basename}-Klaver.pdf" "$song"
+
+            docker run --rm \
+              -v "$(pwd):/app" -w /app --user "$(id -u):$(id -g)" \
+              chordpro/chordpro chordpro \
+              --config=config/lyrics.json \
+              --output="build/pages/${basename}-Ainult_sonad.pdf" "$song"
+          done
+
+      - name: Generate song index
+        run: python3 scripts/build_pages_index.py songs build/pages
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
