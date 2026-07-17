@@ -7,7 +7,7 @@
 {define: C/Bb}
 
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="4"}
+{start_of_grid label="I" shape="4"}
 || Dm | Bb | C | Dm |
 |  Dm | Bb | C | Dm ||
 {end_of_grid}
@@ -34,7 +34,7 @@ Hamõ [Dm]õhukõ, su sälän prunts om [Bb]tummõ
 {end_of_verse}
 
 {comment-vocals: Soolo · 9 takti}
-{start_of_grid label="Soolo · 9 takti" shape="4"}
+{start_of_grid label="SO" shape="4"}
 || Dm | Bb | C | Dm ||
 {end_of_grid}
 
@@ -56,7 +56,7 @@ Sis ku [Dm]kulmetas ja välän satas [Bb]lummõ
 {end_of_verse}
 
 {comment-vocals: Outro}
-{start_of_grid label="Outro" shape="4"}
+{start_of_grid label="O" shape="4"}
 || Dm | Bb | C | Dm |
 |  Dm | Bb | C | Dm ||
 {end_of_grid}

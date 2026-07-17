@@ -22,7 +22,7 @@
 {define-guitar: E/G# base-fret 1 frets 4 2 2 1 0 0}
 {define-guitar: E/B base-fret 1 frets X 2 2 1 0 0}
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="1"}
+{start_of_grid label="I" shape="1"}
 || E ||
 {end_of_grid}
 
@@ -33,7 +33,7 @@ Siin [A]hernes [B]küpseb [E]kaunades
 ja [A]varre [B]otsas [E]õun.
 {end_of_verse}
 
-{start_of_bridge: label="Vaheosa"}
+{start_of_bridge: label="V"}
 Ladva[C#m]õuna[G#m]na siis [A]hea on kasvada,[E]
 kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
@@ -46,14 +46,14 @@ Ja [A]jõud on [B]päikeses, [E]vihmavees,
 puid [A]jõuet[B]uks teeb [E]põud.
 {end_of_verse}
 
-{start_of_bridge: label="Vaheosa"}
+{start_of_bridge: label="V"}
 Ladva[C#m]õuna[G#m]na siis [A]hea on kasvada,[E]
 kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
 {end_of_bridge}
 
 {comment-vocals: Vahemäng}
-{start_of_grid label="Vahemäng" shape="4"}
+{start_of_grid label="VM" shape="4"}
 || E | D5 | C#5 | A5 |
 |  E | D5 | C#5 | A5 |
 |  A5 | G#5 | E | . ||
@@ -68,20 +68,13 @@ On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]
 {end_of_chorus}
 
-{comment-vocals: Instrumentaal}
-{start_of_grid label="Instrumentaal" shape="4"}
-|| E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  E5 | D5 | C#5 | A5 |
-|  A5 | G#5 | E5 | . |
-|  C#m | G#m | . | . |
-|  F#m | A | B | E ||
+{comment-vocals: Instrumentaal · 8×}
+{start_of_grid label="IN" shape="4"}
+|: E5 | E5 | E5 | D5~C#5~A5 :|
 {end_of_grid}
+[A5] [G#5] [E5]
+[C#m] [G#m]
+[F#m] [A] [B] [E]
 
 {start_of_verse: label="S3"}
 Ei [A/E]olla [B/E]suuda [E]iga mees
@@ -90,7 +83,7 @@ Jääb [A]seeme [B]tooreks [E]südames,
 kui [A]huulil [B]vale [E]laul.
 {end_of_verse}
 
-{start_of_bridge: label="Vaheosa"}
+{start_of_bridge: label="V"}
 Ladva[C#m]õuna[G#m]na siis [A]hea on kasvada,[E]
 kui ei käi [C#m]ringi [G#m]pea
 ja [F#m]pole hirmu [A]alla [B]kukkuda.[E]
@@ -104,7 +97,8 @@ Ja [A]tuuled [E/B]käivad ja [B]sasivad puid.[E]
 Ja [A]kuskil [E/B]ootel on [B]linnatäis suid.[E]
 {end_of_chorus}
 
-{start_of_chorus: label="Instr"}
+{comment-vocals: Instrumentaal}
+{start_of_chorus: label="R"}
 On [A]õunal [E/B]süda ja [B]seemned seal sees.[E]
 [E/G#]
 Kas [A]aimab [E/B]süda, mis [B]teekond on ees?[E]

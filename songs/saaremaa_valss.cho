@@ -15,7 +15,7 @@
 {define-guitar: A7/E base-fret 1 frets 0 0 2 0 2 0}
 {comment-guitar: Kõik vahemängud pikemad e. nagu intro}
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="4"}
+{start_of_grid label="I" shape="4"}
 || F | F/A | C7 | F |
 |  F | F/A | Bb | C ||
 {end_of_grid}

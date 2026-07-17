@@ -5,7 +5,7 @@
 {time: 4/4}
 
 {comment-vocals: Intro · iga akord 1 takt}
-{start_of_grid label="Intro · iga akord 1 takt" shape="4"}
+{start_of_grid label="I" shape="4"}
 || Ab | Bb | Eb | Cm |
 |  Ab | Bb | Eb | Cm ||
 {end_of_grid}
@@ -53,6 +53,6 @@ ka praegu
 {chorus: label="R"}
 
 {comment-vocals: Outro}
-{start_of_grid label="Outro" shape="4"}
+{start_of_grid label="O" shape="4"}
 || Ab | Bb | Eb | Cm ||
 {end_of_grid}

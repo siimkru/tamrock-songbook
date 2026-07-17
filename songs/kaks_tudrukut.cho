@@ -10,7 +10,7 @@
 {define-guitar: Eb/G base-fret 3 frets X X 3 1 2 1}
 {define-guitar: Bb/D base-fret 1 frets X X 0 3 3 1}
 {comment-vocals: Intro · 4×}
-{start_of_grid label="Intro" shape="0+4+1"}
+{start_of_grid label="I" shape="0+4+1"}
 || G | C | D | G :| 4×
 {end_of_grid}
 
@@ -39,7 +39,7 @@ aega on [C]palju nad [D]jõuavad [Eb]küll
 {end_of_verse}
 
 {comment-vocals: Outro}
-{start_of_grid label="Outro" shape="0+4+1"}
+{start_of_grid label="O" shape="0+4+1"}
 || Eb | Eb | Eb | Eb |
 | Eb/G | Abmaj7 | Bb/D | Bb/D :| ...
 {end_of_grid}

@@ -5,7 +5,7 @@
 {time: 4/4}
 
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="4"}
+{start_of_grid label="I" shape="4"}
 || F#m | A | E | G |
 |  D | . | . | . ||
 {end_of_grid}
@@ -25,9 +25,9 @@ kes, [E]jalgades tuul,
 [A]tantsi veel,[C#7] tantsi veel!
 [F#m]Neiu mustas [D]kleidis... [A] [C#7]
 {end_of_chorus}
-{chorus: label="R · korda"}
+{chorus: label="R"}
 {comment-vocals: Instrumentaal}
-{start_of_grid label="Instrumentaal" shape="4"}
+{start_of_grid label="IN" shape="4"}
 || F#m | A | E | G |
 |  D | . | . | . ||
 {end_of_grid}
@@ -38,7 +38,7 @@ ma tantsival neiul haaran [A]kinni käest,
 kuid [E]pudeneb koost [G]meid öösel sidunud [D]roos.
 {end_of_verse}
 {chorus: label="R"}
-{chorus: label="R · korda"}
+{chorus: label="R"}
 
 [F#m] [D] [A] [B] [C#7]
 [*Aaaaaa]
@@ -47,7 +47,7 @@ kuid [E]pudeneb koost [G]meid öösel sidunud [D]roos.
 [F#m] [D] [A] [B] [C#7]
 
 {chorus: label="R"}
-{chorus: label="R · korda"}
+{chorus: label="R"}
 
 [F#m] [D] [A] [C#7]
 [*Aaaaaa]

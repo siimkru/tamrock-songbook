@@ -9,7 +9,7 @@
 {define-guitar: B5 base-fret 2 frets X 1 3 3 X X}
 {comment-guitar: Terve loo vältel peaks kõik akordid mängida [Em]/[E] kujuliste barre-akordidena.}
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="4"}
+{start_of_grid label="I" shape="4"}
 || C | Am | F | G |
 |  C | Am | F | G ||
 {end_of_grid}
@@ -48,6 +48,6 @@ tantsib [G]Heikiga Heikiga [C]jälle
 {end_of_chorus}
 
 {comment-vocals: Outro}
-{start_of_grid label="Outro" shape="0+4+1"}
+{start_of_grid label="O" shape="0+4+1"}
 || C | Am | F | G :| ...
 {end_of_grid}

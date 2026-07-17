@@ -10,7 +10,7 @@
 {define-guitar: Em/G base-fret 1 frets 3 2 2 0 0 0}
 {define-guitar: D/F# base-fret 1 frets 2 0 0 2 3 2}
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="2"}
+{start_of_grid label="I" shape="2"}
 || Em | Bm ||
 {end_of_grid}
 
@@ -54,9 +54,9 @@ ja ma [G]oma ei [D]leiagi [Em]üles.  [Bm]    [Em] [Em/F#] [Em/G]
 {end_of_verse}
 
 {chorus: label="R"}
-{chorus: label="R · korda"}
+{chorus: label="R"}
 
 {comment-vocals: Outro · viiuli soolo}
-{start_of_grid label="Outro · viiuli soolo" shape="2"}
+{start_of_grid label="O" shape="2"}
 || Em | Bm ||
 {end_of_grid}

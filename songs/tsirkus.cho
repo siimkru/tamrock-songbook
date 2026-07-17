@@ -5,7 +5,7 @@
 {time: 4/4}
 
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="1"}
+{start_of_grid label="I" shape="1"}
 || D ||
 {end_of_grid}
 
@@ -31,10 +31,10 @@ kui plaanid täis kõik [G]saan
 {end_of_verse}
 
 {chorus: label="R"}
-{chorus: label="R · korda"}
+{chorus: label="R"}
 
 {comment-vocals: Instrumentaal}
-{start_of_grid label="Instrumentaal" shape="4"}
+{start_of_grid label="IN" shape="4"}
 || C | G | C | G |
 |  D | C | G | D |
 |  D | C | G | D ||
@@ -42,9 +42,9 @@ kui plaanid täis kõik [G]saan
 
 
 {chorus: label="R"}
-{chorus: label="R · korda"}
+{chorus: label="R"}
 
-{start_of_verse: label="Tr"}
+{start_of_verse: label="S3"}
 peatub siin, peatub lõvi siin
 kaasa viin, karu kaasa viin
 mööda käib, nööri mööda käib

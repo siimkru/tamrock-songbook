@@ -10,7 +10,7 @@
 {define-guitar: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
 
 {comment-vocals: Intro}
-{start_of_grid label="Intro" shape="4"}
+{start_of_grid label="I" shape="4"}
 || Bb | Eb | Bb | Eb ||
 {end_of_grid}
 
@@ -36,7 +36,7 @@ sest [Bb]nii on [F]kindlamgi [Bb]veel. [Eb] [Bb] [Eb]
 {end_of_verse}
 
 {comment-vocals: Vahemäng}
-{start_of_grid label="Vahemäng" shape="4"}
+{start_of_grid label="VM" shape="4"}
 || Bb | Eb | Bb | Eb ||
 {end_of_grid}
 
@@ -73,7 +73,7 @@ sest [Bb]nii on [F]kindlamgi [Bb]veel.
 {end_of_verse}
 
 {comment-vocals: Outro}
-{start_of_grid label="Outro" shape="4"}
+{start_of_grid label="O" shape="4"}
 || Bb | Eb | Bb | Eb ||
 {end_of_grid}
 

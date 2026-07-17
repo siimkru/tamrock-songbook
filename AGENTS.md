@@ -26,7 +26,7 @@ Install Drive dependencies with `python -m pip install -r requirements.txt`. Upl
 
 ## Coding Style & Naming Conventions
 
-Start song files with `{title: ...}` and add `{artist: ...}` when known. Place chords inline, for example `[Am]`, and label sections with directives such as `{comment: Intro}`. Preserve Estonian spelling and UTF-8 text. For Python, use four-space indentation, snake_case names, and PEP 8 conventions. Match the surrounding JSON-like formatting in configuration files.
+Start song files with `{title: ...}` and add `{artist: ...}` when known. Place chords inline, for example `[Am]`. Keep every section label at most three characters long. Number verses sequentially as `S1`, `S2`, and so on; label every chorus `R`, including repeated or modified choruses; and label bridge sections `V`. Use `I` for intros, `O` for outros, `VM` for interludes, `IN` for instrumental sections, and `SO` for solos. Express repetition by repeating `{chorus: label="R"}`. Put details such as repetition counts, bar counts, key changes, or instrumental variations in a separate comment directive instead of the section label. Preserve Estonian spelling and UTF-8 text. For Python, use four-space indentation, snake_case names, and PEP 8 conventions. Match the surrounding JSON-like formatting in configuration files.
 
 ## Testing Guidelines
 
