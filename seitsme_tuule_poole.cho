@@ -1,5 +1,7 @@
 {title: Seitsme tuule poole}
 {artist: Karl-Erik Taukar}
+{define: E base-fret 7 frets X 1 3 3 3 X}
+{define: Badd4 base-fret 1 frets X 2 4 4 4 4}
 {columns: 2}
 
 {comment: Laulu alustab kitarr ja trummid}
