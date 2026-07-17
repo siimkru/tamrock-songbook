@@ -13,7 +13,6 @@ from urllib.parse import quote
 TITLE_DIRECTIVE = re.compile(r"^\s*\{title\s*:\s*(.*?)\s*\}\s*$", re.IGNORECASE)
 PDF_VARIANTS = (
     ("Kitarr", "Kitarr"),
-    ("Klaver", "Klaver"),
     ("Ainult sõnad", "Ainult_sonad"),
 )
 
@@ -60,7 +59,7 @@ def build_index(songs_dir: Path, output_dir: Path) -> None:
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TAMROCK laulik kitarri, klaveri ja vokaali PDF-idega.">
+    <meta name="description" content="TAMROCK laulik kitarri ja vokaali PDF-idega.">
     <title>TAMROCK laulik</title>
     <style>
       :root {{ color-scheme: light; font-family: system-ui, -apple-system, sans-serif; }}

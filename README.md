@@ -8,7 +8,7 @@ Drive through GitHub Actions.
 
 ```text
 songs/       ChordPro song sources
-config/      Guitar, keyboard, and lyrics layouts
+config/      Guitar and lyrics layouts
 scripts/     Google Drive OAuth and upload utilities
 build/       Locally generated PDFs (ignored by Git)
 ```
@@ -33,7 +33,7 @@ mkdir -p build
   --output build/vocals.pdf songs/*.cho
 ```
 
-Render changes with all three files in `config/` before submitting them and
+Render changes with both files in `config/` before submitting them and
 inspect the PDFs for clipping, page breaks, chord placement, and diagrams.
 
 ## Google Drive tooling

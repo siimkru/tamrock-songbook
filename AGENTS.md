@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains the TAMROCK ChordPro songbook. Song sources live in `songs/` as `*.cho`; use lowercase, underscore-separated filenames such as `oma_laulu_ei_leia_ma_ules.cho`. Instrument-specific ChordPro configurations are in `config/` (`guitar.json`, `keyboard.json`, and `lyrics.json`). Google Drive utilities live in `scripts/`, and CI build/upload behavior is defined in `.github/workflows/main.yml`. Put generated PDFs in the ignored `build/` directory.
+This repository contains the TAMROCK ChordPro songbook. Song sources live in `songs/` as `*.cho`; use lowercase, underscore-separated filenames such as `oma_laulu_ei_leia_ma_ules.cho`. Instrument-specific ChordPro configurations are in `config/` (`guitar.json` and `lyrics.json`). Google Drive utilities live in `scripts/`, and CI build/upload behavior is defined in `.github/workflows/main.yml`. Put generated PDFs in the ignored `build/` directory.
 
 ## Build, Test, and Development Commands
 
@@ -30,7 +30,7 @@ Start song files with `{title: ...}` and add `{artist: ...}` when known. Place c
 
 ## Testing Guidelines
 
-There is no automated test suite or coverage target. Render song and configuration changes with all three configurations, then inspect PDFs for clipped text, incorrect page breaks, misplaced chords, and unwanted diagrams. For Python edits, run `python3 -m py_compile scripts/upload_to_drive.py scripts/generate_token.py`. Do not perform a real Drive upload unless explicitly testing credentials.
+There is no automated test suite or coverage target. Render song and configuration changes with both configurations, then inspect PDFs for clipped text, incorrect page breaks, misplaced chords, and unwanted diagrams. For Python edits, run `python3 -m py_compile scripts/upload_to_drive.py scripts/generate_token.py`. Do not perform a real Drive upload unless explicitly testing credentials.
 
 ## Commit & Push Guidelines
 

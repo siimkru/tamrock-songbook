@@ -7,7 +7,6 @@ on:
     paths:
       - "songs/*.cho"
       - "config/guitar.json"
-      - "config/keyboard.json"
       - "config/lyrics.json"
       - "scripts/build_pages_index.py"
       - ".github/workflows/pages.yml"
@@ -55,12 +54,6 @@ jobs:
               chordpro/chordpro chordpro \
               --config=config/guitar.json \
               --output="build/pages/${basename}-Kitarr.pdf" "$song"
-
-            docker run --rm \
-              -v "$(pwd):/app" -w /app --user "$(id -u):$(id -g)" \
-              chordpro/chordpro chordpro \
-              --config=config/keyboard.json \
-              --output="build/pages/${basename}-Klaver.pdf" "$song"
 
             docker run --rm \
               -v "$(pwd):/app" -w /app --user "$(id -u):$(id -g)" \

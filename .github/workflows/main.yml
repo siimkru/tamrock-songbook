@@ -85,11 +85,6 @@ jobs:
             echo "Generating $GUITAR_PDF..."
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=config/guitar.json -o "$GUITAR_PDF" "$file"
 
-            # Generate Keyboard PDF
-            KEYBOARD_PDF="build/${BASENAME}-Klaver.pdf"
-            echo "Generating $KEYBOARD_PDF..."
-            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=config/keyboard.json -o "$KEYBOARD_PDF" "$file"
-
             LYRICS_PDF="build/${BASENAME}-Ainult_sonad.pdf"
             echo "Generating $LYRICS_PDF..."
             docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=config/lyrics.json -o "$LYRICS_PDF" "$file"
@@ -97,9 +92,6 @@ jobs:
             # Upload all PDFs
             echo "Uploading $GUITAR_PDF to Google Drive..."
             python scripts/upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID" "Kitarr"
-
-            echo "Uploading $KEYBOARD_PDF to Google Drive..."
-            python scripts/upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID" "Klaver"
 
             echo "Uploading $LYRICS_PDF to Google Drive..."
             python scripts/upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID" "Sõnad"
