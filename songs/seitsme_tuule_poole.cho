@@ -1,0 +1,102 @@
+{title: Seitsme tuule poole}
+{artist: Karl-Erik Taukar}
+{define: E base-fret 7 frets 0 1 3 3 3 X fingers X 1 3 3 3 X}
+{define: Badd4 base-fret 1 frets x 2 4 4 4 4 fingers x 1 3 3 3 3}
+{columns: 2}
+
+{comment: Laulu alustab kitarr ja trummid}
+
+{comment: Intro}
+[E] [A6] [E] [A6]
+[E] [A6] [E] [A6]
+
+{start_of_verse Salm 1}
+Kaua [E]kaua[A6] olen [E]ma [A6]
+teinud [E]tööd,[A6] aeg on e[E]lada [A6]
+Liiga [E]kaua[A6] samad [E]näod [A6]
+Käes on [E]aeg[A6] teele a[E]suda [A6]
+{end_of_verse}
+
+{comment: Teised liituvad}
+[E][A6] mm[E][A6] mm
+[E][A6] mm[E][A6]
+
+{start_of_verse Salm 2}
+Hoia [E]hoia[A6] mul [E]käest [A6]
+Las see [E]päev[A6] annab vas[E]tuseid [A6]
+Leia [E]leia[A6] üles [E]mäed [A6]
+Las [E]näeb[A6] kogu maa[E]ilm meid [A6]
+{end_of_verse}
+
+{start_of_chorus Refrään}
+[A]Päiksest kuum on [E]maantee
+Samu [Badd4]plaate kuula[C#m]me (ei-ei-ei-ei)
+[A]Lõputult on [E]aega
+End ei [Badd4]vaeva asjata [E](ei-ei-ei-ei)
+  
+[A]Ei tee suuri [E]plaane
+Kui kokku [Badd4]saame
+Siis sõida[C#m]me (ei-ei-ei-ei)
+[A]Seitsme tuule [E]poole
+Nende [Badd4]hoolde end jäta[E]me
+{end_of_chorus}
+
+{comment: Vahemäng}
+[E][A6] mm[E][A6] mm
+[E][A6] mm[E][A6]
+
+{start_of_verse Salm 3}
+Naera [E]naera[A6] see [E]päev [A6]
+Meelde [E]jääb [A6]koos kui o[E]leme [A6]
+Naera [E]naera[A6] see [E]öö [A6]
+Läheb [E]mööda[A6] kuid ei u[E]nune [A6]
+{end_of_verse}
+
+{start_of_chorus Refrään 2}
+[A]Päiksest kuum on [E]maantee
+Samu [Badd4]plaate kuula[C#m]me (ei-ei-ei-ei)
+[A]Lõputult on [E]aega
+End ei [Badd4]vaeva asjata [E](ei-ei-ei-ei)
+
+[A]Ei tee suuri [E]plaane
+Kui kokku [Badd4]saame
+Siis sõida[C#m]me (ei-ei-ei-ei)
+[A]Seitsme tuule [E]poole
+Nende [Badd4]hoolde end jäta[F#]me
+{end_of_chorus}
+
+{comment: [F#] vahemäng}
+[F#] [A]
+[F#] [B]
+
+{start_of_chorus Refrään 3}
+{comment: Ainult kitarr}
+[A]Päiksest kuum on [E]maantee
+Samu [Badd4]plaate kuula[C#m]me
+[A]Lõputult on [E]aega
+End ei [Badd4]vaeva asjata
+
+{comment: trummid pah pah pah ja kõik teised tulevad sisse}
+[A]Ei tee suuri [E]plaane
+Kui kokku [Badd4]saame
+Siis sõida[C#m]me (ei-ei-ei-ei)
+[A]Seitsme tuule [E]poole
+Nende [Badd4]hoolde end jäta[E]me (ei-ei-ei-ei)
+
+[A]Päiksest kuum on [E]maantee
+Samu [Badd4]plaate kuula[C#m]me (ei-ei-ei-ei)
+[A]Lõputult on [E]aega
+End ei [Badd4]vaeva asjata [E](ei-ei-ei-ei)
+
+[A]Ei tee suuri [E]plaane
+Kui kokku [Badd4]saame
+Siis sõida[C#m]me (ei-ei-ei-ei)
+[A]Seitsme tuule [E]poole
+Nende [Badd4]hoolde end jäta[E]me
+{end_of_chorus}
+
+{comment: Outro}
+[E](ei-ei[A6]-ei-ei) [E] [A6]
+[E](ei-ei[A6]-ei-ei) [E] [A6]
+[E](ei-ei[A6]-ei-ei) [E] [A6]
+[E] [A6] [E]
