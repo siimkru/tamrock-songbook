@@ -27,7 +27,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
+          pip install -r requirements.txt
 
       - name: Find files to process
         id: changed-files
@@ -38,25 +38,31 @@ jobs:
           # Handle a manual run first
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
             echo "Manual run: Processing all .cho files."
-            FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
+            FILES_TO_PROCESS=$(find songs -maxdepth 1 -name "*.cho" -print | sort | tr '\n' ' ')
           else
             # This is a push event. Check what changed.
             echo "Push event: Checking for changed files."
-            CHANGED_FILES=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD)
+            BASE_SHA="${{ github.event.before }}"
 
-            # If a config file was changed, rebuild everything.
-            if echo "$CHANGED_FILES" | grep -q -E 'guitar\.json|keyboard\.json|lyrics\.json'; then
-              echo "Config file change detected! Rebuilding all .cho files."
-              FILES_TO_PROCESS=$(find . -maxdepth 1 -name "*.cho" -printf "%f " || true)
+            if [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+              CHANGED_FILES="config/"
+            else
+              CHANGED_FILES=$(git diff --name-only --diff-filter=AMR "$BASE_SHA" HEAD)
+            fi
+
+            # Shared build or upload changes affect every song.
+            if echo "$CHANGED_FILES" | grep -q -E '^(config/|scripts/|requirements\.txt$|\.github/workflows/main\.yml$)'; then
+              echo "Shared build file changed. Rebuilding all .cho files."
+              FILES_TO_PROCESS=$(find songs -maxdepth 1 -name "*.cho" -print | sort | tr '\n' ' ')
             else
               # Otherwise, only process the .cho files that changed.
-              echo "No config file change. Processing only changed .cho files."
-              FILES_TO_PROCESS=$(echo "$CHANGED_FILES" | grep '\.cho$' | tr '\n' ' ' || true)
+              echo "No shared build file changed. Processing changed songs only."
+              FILES_TO_PROCESS=$(echo "$CHANGED_FILES" | grep '^songs/.*\.cho$' | tr '\n' ' ' || true)
             fi
           fi
           
           # Set the output.
-          echo "process_list=$FILES_TO_PROCESS" >> $GITHUB_OUTPUT
+          echo "process_list=$FILES_TO_PROCESS" >> "$GITHUB_OUTPUT"
           echo "Files to process: [${FILES_TO_PROCESS}]"
 
       - name: Generate and Upload PDFs
@@ -67,36 +73,38 @@ jobs:
           GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
           GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
         run: |
+          mkdir -p build
+
           for file in ${{ steps.changed-files.outputs.process_list }}; do
             BASENAME=$(basename "$file" .cho)
 
             echo "--- Processing $BASENAME ---"
 
             # Generate Guitar PDF
-            GUITAR_PDF="${BASENAME}-Kitarr.pdf"
+            GUITAR_PDF="build/${BASENAME}-Kitarr.pdf"
             echo "Generating $GUITAR_PDF..."
-            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=guitar.json -o "$GUITAR_PDF" "$file"
+            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=config/guitar.json -o "$GUITAR_PDF" "$file"
 
             # Generate Keyboard PDF
-            KEYBOARD_PDF="${BASENAME}-Klaver.pdf"
+            KEYBOARD_PDF="build/${BASENAME}-Klaver.pdf"
             echo "Generating $KEYBOARD_PDF..."
-            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=keyboard.json -o "$KEYBOARD_PDF" "$file"
+            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=config/keyboard.json -o "$KEYBOARD_PDF" "$file"
 
-            LYRICS_PDF="${BASENAME}-Ainult_sonad.pdf"
+            LYRICS_PDF="build/${BASENAME}-Ainult_sonad.pdf"
             echo "Generating $LYRICS_PDF..."
-            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=lyrics.json -o "$LYRICS_PDF" "$file"
+            docker run --rm -v "$(pwd):/app" -w /app --user $(id -u):$(id -g) chordpro/chordpro chordpro --config=config/lyrics.json -o "$LYRICS_PDF" "$file"
 
             # Upload all PDFs
             echo "Uploading $GUITAR_PDF to Google Drive..."
-            python upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID" "Kitarr"
+            python scripts/upload_to_drive.py "$GUITAR_PDF" "$GDRIVE_FOLDER_ID" "Kitarr"
 
             echo "Uploading $KEYBOARD_PDF to Google Drive..."
-            python upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID" "Klaver"
+            python scripts/upload_to_drive.py "$KEYBOARD_PDF" "$GDRIVE_FOLDER_ID" "Klaver"
 
             echo "Uploading $LYRICS_PDF to Google Drive..."
-            python upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID" "Sõnad"
+            python scripts/upload_to_drive.py "$LYRICS_PDF" "$GDRIVE_FOLDER_ID" "Sõnad"
           done
 
       - name: Cleanup generated PDFs
         if: always() && steps.changed-files.outputs.process_list
-        run: rm -f *.pdf
+        run: rm -rf build

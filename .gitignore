@@ -1,2 +1,14 @@
+# Local OAuth credentials
 /client_secret.json
+
+# IDE and operating-system files
 /.idea/
+.DS_Store
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Generated songbooks
+/build/
+*.pdf

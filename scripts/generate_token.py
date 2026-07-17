@@ -1,17 +1,24 @@
 # generate_token.py
-import os
+import sys
+from pathlib import Path
+
 from google_auth_oauthlib.flow import InstalledAppFlow
 
 # The scopes define what permissions the script is asking for.
 # For this use case, 'drive.file' is sufficient as it allows creating files.
-SCOPES = ['https://www.googleapis.com/auth/drive.file']
-CLIENT_SECRETS_FILE = 'client_secret.json' # The file you downloaded
+SCOPES = ["https://www.googleapis.com/auth/drive.file"]
+CLIENT_SECRETS_FILE = (
+    Path(__file__).resolve().parent.parent / "client_secret.json"
+)
 
 # Check if the client secrets file exists
-if not os.path.exists(CLIENT_SECRETS_FILE):
+if not CLIENT_SECRETS_FILE.exists():
     print(f"Error: The file '{CLIENT_SECRETS_FILE}' was not found.")
-    print("Please download your OAuth 2.0 client credentials from the Google Cloud Console and place it in the same directory as this script.")
-    exit()
+    print(
+        "Please download your OAuth 2.0 client credentials from the Google "
+        "Cloud Console and place it in the repository root."
+    )
+    sys.exit(1)
 
 # Create the flow instance
 flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
