@@ -1,6 +1,6 @@
-# Rattalaagri band songbook
+# TamRock songbook
 
-ChordPro sources and instrument-specific layouts for the Rattalaagri band.
+ChordPro sources and instrument-specific layouts for the TamRock songbook.
 Commits to `main` generate PDFs for changed songs and upload them to Google
 Drive through GitHub Actions.
 
