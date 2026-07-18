@@ -4,7 +4,7 @@
 {tempo: 67}
 {time: 2/2}
 {define: F#5 base-fret 2 frets 1 3 3 X X X}
-{define: B5 base-fret 2 frets X 1 3 3 X X}
+{define: B5 base-fret 7 frets 1 3 3 X X X fingers 1 3 4 X X X}
 {comment-guitar: Terve loo vältel peaks kõik akordid mängida [Em]/[E] kujuliste barre-akordidena.}
 {chord: C base-fret 8 frets 1 3 3 2 1 1 fingers 1 3 4 2 1 1}
 {chord: Am base-fret 5 frets 1 3 3 1 1 1 fingers 1 3 4 1 1 1}
