@@ -12,8 +12,7 @@
 {chord: G base-fret 3 frets 1 3 3 2 1 1 fingers 1 3 4 2 1 1}
 {comment-vocals: Intro}
 {start_of_grid label="I" shape="4"}
-|| C | Am | F | G |
-|  C | Am | F | G ||
+|: C | Am | F | G :|
 {end_of_grid}
 
 {start_of_verse: label="S1"}
