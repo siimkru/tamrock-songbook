@@ -1,0 +1,78 @@
+{title: Tehke ruumi}
+{artist: Trad.Attack!}
+{key: Bm}
+{tempo: 132}
+{time: 4/4}
+
+{comment-vocals: Intro}
+{start_of_grid label="I" shape="4"}
+|| Bm | . | G | . |
+| Bm | . | G | A ||
+{end_of_grid}
+
+{start_of_verse: label="S1"}
+[Bm]Oidke rahvas, tehke ruumi,
+Oidke rahvas, tehke ruumi
+[G]Ma tahan õde õpetada,
+Ma tahan õde õpetada
+[Bm]Noorukesta noomida,
+Noorukesta noomida!
+[G]Kes tahab pereminiaks minna,
+[A]Kes tahab pereminiaks minna
+
+[Bm]See peab une unustama,
+See peab une unustama
+[G]Magamise maha jätma,
+Magamise maha jätma
+[Em]Ukselappe uinuma, (ja)
+Ukselappe uinuma
+[A]Lävelappe langema, (ja)
+Lävelappe langema.
+{end_of_verse}
+
+{comment-vocals: Vahemäng}
+{start_of_grid label="VM" shape="4"}
+|| Bm | . | G | . |
+| D | . | A | . ||
+{end_of_grid}
+
+{start_of_verse: label="S2"}
+[Bm]Kui kuuled kuked laulavad,
+Kui kuuled kuked laulavad
+[G]Ja ehmeslindu elkivad,
+Ja ehmeslindu elkivad
+[Bm]Siis tõuse üles tõrjumata,
+Siis tõuse üles tõrjumata
+[G]Karga üles karjumata,
+[A]Karga üles karjumata,
+
+[Bm]Puhu tuli tulkimata,
+Puhu tuli tulkimata
+[G]Aja ase aukumata,
+Aja ase aukumata
+[Em]Lippa läbi lehmalaudad,
+Lippa läbi lehmalaudad
+[A]Tantsi läbi talleslaudad,
+Tantsi läbi talleslaudad
+{end_of_verse}
+
+{comment-vocals: Vahemäng · 2x}
+{start_of_grid label="VM" shape="4"}
+|: Bm | G | D | A :|
+{end_of_grid}
+
+{comment-vocals: Bridge}
+{start_of_grid label="V" shape="4"}
+|| G | Bm | D | C#m |
+| G | Bm | D | . ||
+{end_of_grid}
+
+{start_of_bridge: label="V"}
+Ma tahan õde õpeta
+{end_of_bridge}
+
+{comment-vocals: Outro}
+{start_of_grid label="O" shape="0+4+1"}
+|: Bm | G | D | A :| 3x
+| D | G | Bm | C#m ||
+{end_of_grid}

@@ -1,0 +1,64 @@
+{title: Muusik}
+{artist: Dagö}
+{key: Bb}
+{tempo: 110}
+{time: 4/4}
+
+[Gm]
+{comment-vocals: Intro}
+{start_of_grid label="I" shape="4"}
+|| Bb | F | Gm | Eb ||
+{end_of_grid}
+
+{start_of_verse: label="S1"}
+[Bb]Tere süütu sugu[F]ühe ühest kaugest ajast
+[Gm]Terje... [Eb]Malle... [Bb]Marje...[Gm] sa vist ei [F]öelnd'ki nime
+[Bb]Ma seesama Toomas,[F] kes su juurde roomas
+[Gm]naine... [Eb]koomas... [Bb]kaine...[Gm] no pole [F]oluline
+[Bb]Enne restorani [F]lavalt silmis läige kaval
+[Gm]a-moll... [Eb]f-duur... [Bb]jutt loll...[Gm] tervitus [F]nimeline
+[Bb]see, kes laulab söögiks,[F] hiljem ühisköögis
+[Gm]sulle... [Eb]ainult... [Bb]hullem...[Gm] romansi [F]imemine
+{end_of_verse}
+
+{start_of_chorus: label="R"}
+[Bb]Õues kohisevad [F]puud
+sulle tere hommi[Gm]kut
+sa ei suudelnudki [Eb]kuud
+hoopis mingit muusi[Bb]kut
+värvi koorub vanni[F]toas
+baaripukist lilla [Gm]kints
+august alla kraani[Eb]joas
+voolas lootus leida [Bb]prints
+{end_of_chorus}
+
+{comment-vocals: Vahemäng}
+{start_of_grid label="VM" shape="4"}
+|| Bb | F | Gm | Eb ||
+{end_of_grid}
+
+{start_of_verse: label="S2"}
+[Bb]Meil on sama maitse,[F] pole sinu maitse
+[Gm]mina... [Eb]ja ka... [Bb]sina...[Gm] ei ole [F]taevaline
+[Bb]vahel linnas näeme,[F] vestlemagi jääme
+[Gm]teemad... [Eb]jõnkse... [Bb]teevad...[Gm] ja naer on [F]vaevaline
+{end_of_verse}
+
+{column_break}
+{chorus: label="R"}
+
+[Bb]
+{start_of_bridge: label="V"}
+[F]Sa ei olnud mingi [Gm]bitch
+lihtsalt mina olin [Bb]lits
+{end_of_bridge}
+
+{comment: 1 vahetakt??}
+{chorus: label="R"}
+{chorus: label="R"}
+
+{comment-vocals: Outro}
+{start_of_grid label="O" shape="4"}
+|: Bb | F | Gm | Eb :|
+{end_of_grid}
+[Bb]
