@@ -3,15 +3,14 @@
 {key: E}
 {tempo: 120}
 {time: 4/4}
-{define-guitar: E base-fret 7 frets 0 1 3 3 3 X fingers X 1 3 3 3 X}
-{define-guitar: Badd4 base-fret 1 frets x 2 4 4 4 4 fingers x 1 3 3 3 3}
+{define: E base-fret 7 frets 0 1 3 3 3 X fingers X 1 3 3 3 X}
+{define: Badd4 base-fret 1 frets x 2 4 4 4 4 fingers x 1 3 3 3 3}
 
 {comment: Laulu alustavad kitarr ja trummid}
 
 {comment-vocals: Intro}
 {start_of_grid label="I" shape="4"}
-|| E | A6 | E | A6 |
-|  E | A6 | E | A6 ||
+|: E A6 | E A6 :|
 {end_of_grid}
 
 {start_of_verse: label="S1"}
@@ -71,7 +70,8 @@ Nende [Badd4]hoolde end jäta[F#]me
 
 {comment-vocals: F# vahemäng}
 {start_of_grid label="VM" shape="4"}
-|| F# | A | F# | B ||
+|| F# | . | A | . |
+|  F# | . | B | . ||
 {end_of_grid}
 
 {start_of_chorus: label="R"}

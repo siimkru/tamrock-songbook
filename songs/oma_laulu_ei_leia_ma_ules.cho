@@ -3,15 +3,13 @@
 {key: Em}
 {tempo: 190}
 {time: 6/8}
-{define: Em/F#}
-{define: Em/G}
-{define: D/F#}
-{define-guitar: Em/F# base-fret 1 frets 2 2 2 0 0 0 fingers 1 1 1 0 0 0}
-{define-guitar: Em/G base-fret 1 frets 3 2 2 0 0 0}
-{define-guitar: D/F# base-fret 1 frets 2 0 0 2 3 2}
+{define: Em/F# base-fret 1 frets 2 2 2 0 0 0 fingers 1 1 1 0 0 0}
+{define: Em/G base-fret 1 frets 3 2 2 0 0 0}
+{define: D/F# base-fret 1 frets 2 0 0 2 3 2}
 {comment-vocals: Intro}
-{start_of_grid label="I" shape="2"}
-|| Em | Bm ||
+{start_of_grid label="I" shape="0+2+1"}
+|: Em . :| 4x
+|: Em  Bm :| 8x
 {end_of_grid}
 
 {start_of_verse: label="S1"}
@@ -57,6 +55,6 @@ ja ma [G]oma ei [D]leiagi [Em]üles.  [Bm]    [Em] [Em/F#] [Em/G]
 {chorus: label="R"}
 
 {comment-vocals: Outro · viiuli soolo}
-{start_of_grid label="O" shape="2"}
-|| Em | Bm ||
+{start_of_grid label="O" shape="0+2+1"}
+|: Em  Bm :| 16x
 {end_of_grid}

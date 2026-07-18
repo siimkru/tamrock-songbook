@@ -4,10 +4,8 @@
 {tempo: 95}
 {time: 4/4}
 
-{define: Bb/F}
-{define: F/C}
-{define-guitar: Bb/F base-fret 1 frets 1 1 3 3 3 1 fingers 1 1 3 3 3 1}
-{define-guitar: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
+{define: Bb/F base-fret 1 frets 1 1 3 3 3 1 fingers 1 1 3 3 3 1}
+{define: F/C base-fret 1 frets X 3 3 2 1 1 fingers X 3 4 2 1 1}
 
 {comment-vocals: Intro}
 {start_of_grid label="I" shape="4"}
@@ -37,7 +35,7 @@ sest [Bb]nii on [F]kindlamgi [Bb]veel. [Eb] [Bb] [Eb]
 
 {comment-vocals: Vahemäng}
 {start_of_grid label="VM" shape="4"}
-|| Bb | Eb | Bb | Eb ||
+|: Bb | Eb | Bb | Eb :|
 {end_of_grid}
 
 {start_of_textblock align=left flush=left}
@@ -74,7 +72,7 @@ sest [Bb]nii on [F]kindlamgi [Bb]veel.
 
 {comment-vocals: Outro}
 {start_of_grid label="O" shape="4"}
-|| Bb | Eb | Bb | Eb ||
+|: Bb | Eb | Bb | Eb :|
 {end_of_grid}
 
 {comment-guitar: [Eb] asemel võib mängida [Ebmaj7]}

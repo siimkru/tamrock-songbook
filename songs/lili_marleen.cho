@@ -5,6 +5,9 @@
 {time: 4/4}
 
 {comment: Trummid annavad sisse, siis tuleb soolo, 4 takti intro}
+{start_of_grid label="I" shape="4"}
+|: C | . | F | G :|
+{end_of_grid}
 
 {start_of_verse: label="S1"}
 [C]Kasarmu ees väraval, [G]öisel kõnniteel  
@@ -51,4 +54,6 @@ kui [F]siis Li[G]li Mar[C]leen [Am]
 kui [F]siis Li[G]li Mar[C]leen  
 {end_of_verse}
 
-{comment: Outro}
+{start_of_grid label="O" shape="4"}
+|: C | . | F | G :|
+{end_of_grid}

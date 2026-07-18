@@ -5,7 +5,8 @@
 {time: 4/4}
 {comment-vocals: Intro}
 {start_of_grid label="I" shape="4"}
-|| Bb | Bb | Cm | F |
+|| Bb | . | . | . |
+| Cm | . | F | . |
 |  Bb | F | Bb | . ||
 {end_of_grid}
 {start_of_chorus: label="R"}
@@ -23,11 +24,10 @@ Leidsin ma, leidsin [F]ma, pärli tõelise [Bb]veest  [F] [Bb]
 {chorus: label="R"}
 {comment-vocals: Vahemäng}
 {start_of_grid label="VM" shape="4"}
-|| Cm | F | Bb | Bb |
+|| Cm | F | Bb | . |
 |  Cm | F | Bb | Bb7 |
 |  Eb | Ebm | Dm | G |
-|  Cm | F | Bb | . |
-|  C | C | C | C ||
+|  Cm | F | Bb | C ||
 {end_of_grid}
 {comment: <b>Helistik [Bb] -> [C]</b>}
 {transpose: 2}

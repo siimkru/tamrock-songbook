@@ -6,7 +6,7 @@
 
 {comment-vocals: Intro}
 {start_of_grid label="I" shape="1"}
-|| D ||
+|: D :|
 {end_of_grid}
 
 {start_of_verse: label="S1"}
@@ -35,12 +35,9 @@ kui plaanid täis kõik [G]saan
 
 {comment-vocals: Instrumentaal}
 {start_of_grid label="IN" shape="4"}
-|| C | C | G | G |
-|  C | C | G | G |
-|  D | D | C | C |
-|  G | G | D | D |
-|  D | D | C | C |
-|  G | G | D | D ||
+|: C | . | G | . :|
+|: D | . | C | . |
+|  G | . | D | . :|
 {end_of_grid}
 
 

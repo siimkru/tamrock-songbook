@@ -4,11 +4,8 @@
 {tempo: 153}
 {time: 4/4}
 {comment-vocals: Intro}
-{start_of_grid label="I" shape="4"}
-|| D | G | A | D |
-|  D | G | A | D |
-|  D | G | A | D |
-|  D | G | A | D ||
+{start_of_grid label="I" shape="0+4+1"}
+|: D | G | A | D :| 4x
 {end_of_grid}
 
 {start_of_verse: label="S1"}
@@ -25,11 +22,8 @@
 {end_of_chorus}
 
 {comment-vocals: Vahemäng}
-{start_of_grid label="VM" shape="4"}
-|| D | G | A | D |
-|  D | G | A | D |
-|  D | G | A | D |
-|  D | G | A | D ||
+{start_of_grid label="VM" shape="0+4+1"}
+|: D | G | A | D :| 4x
 {end_of_grid}
 
 {start_of_verse: label="S2"}
@@ -42,10 +36,8 @@
 
 {comment-vocals: Vahemäng}
 {start_of_grid label="VM" shape="4"}
-|| Bm | G | A | D |
-|  G | D | A | . |
-|  Bm | G | A | D |
-|  G | D | A | . ||
+|: Bm | G | A | D |
+|  G | D | A | . :|
 {end_of_grid}
 
 {chorus: label="R"}

@@ -6,8 +6,8 @@
 
 {comment-vocals: Intro}
 {start_of_grid label="I" shape="4"}
-|| F#m | A | E | G |
-|  D | . | . | . ||
+|: F#m | . | . | . |
+| A | E | G | D :|
 {end_of_grid}
 
 {start_of_verse: label="S1"}
@@ -28,8 +28,8 @@ kes, [E]jalgades tuul,
 {chorus: label="R"}
 {comment-vocals: Instrumentaal}
 {start_of_grid label="IN" shape="4"}
-|| F#m | A | E | G |
-|  D | . | . | . ||
+|: F#m | . | . | . |
+| A | E | G | D :|
 {end_of_grid}
 
 {start_of_verse: label="S2"}
@@ -41,16 +41,16 @@ kuid [E]pudeneb koost [G]meid öösel sidunud [D]roos.
 {chorus: label="R"}
 
 [F#m] [D] [A] [B] [C#7]
-[*Aaaaaa]
+Aaaaaa
 [F#m] [D] [A] [B] [C#7]
-[*Aaaaaa]
+Aaaaaa
 [F#m] [D] [A] [B] [C#7]
 
 {chorus: label="R"}
 {chorus: label="R"}
 
 [F#m] [D] [A] [C#7]
-[*Aaaaaa]
+Aaaaaa
 [F#m] [D] [A] [C#7]
-[*Aaaaaa]
+Aaaaaa
 [F#m] [D] [A] [C#7]
