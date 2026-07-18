@@ -58,13 +58,16 @@ Tantsi läbi talleslaudad
 
 {comment-vocals: Vahemäng · 2x}
 {start_of_grid label="VM" shape="4"}
-|: Bm | G | D | A :|
+|: Bm | . | G | . |
+| D | . | A | . :|
 {end_of_grid}
 
 {comment-vocals: Bridge}
 {start_of_grid label="V" shape="4"}
-|| G | Bm | D | C#m |
-| G | Bm | D | . ||
+|| G | . | Bm | . |
+| D | . | C#m | . |
+| G | . | Bm | . |
+| D | . | . | . ||
 {end_of_grid}
 
 {start_of_bridge: label="V"}
@@ -73,6 +76,8 @@ Ma tahan õde õpeta
 
 {comment-vocals: Outro}
 {start_of_grid label="O" shape="0+4+1"}
-|: Bm | G | D | A :| 3x
-| D | G | Bm | C#m ||
+|: Bm | . | G | . |
+| D | . | A | . :| 3x
+| D | . | G | . |
+| Bm | . | C#m | . ||
 {end_of_grid}
