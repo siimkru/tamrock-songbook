@@ -35,9 +35,12 @@ kui plaanid täis kõik [G]saan
 
 {comment-vocals: Instrumentaal}
 {start_of_grid label="IN" shape="4"}
-|| C | G | C | G |
-|  D | C | G | D |
-|  D | C | G | D ||
+|| C | C | G | G |
+|  C | C | G | G |
+|  D | D | C | C |
+|  G | G | D | D |
+|  D | D | C | C |
+|  G | G | D | D ||
 {end_of_grid}
 
 
