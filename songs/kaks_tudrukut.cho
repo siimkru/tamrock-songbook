@@ -6,9 +6,9 @@
 {define: Eb base-fret 6 frets X 1 3 3 3 X fingers X 1 3 3 3 X}
 {define: Eb/G base-fret 3 frets X X 3 1 2 1}
 {define: Bb/D base-fret 1 frets X X 0 3 3 1}
-{comment-vocals: Intro · 4×}
+{comment-vocals: Intro · 4x}
 {start_of_grid label="I" shape="0+4+1"}
-|: G | C | D | G :| 4×
+|: G | C | D | G :| 4x
 {end_of_grid}
 
 {start_of_verse: label="S1"}
