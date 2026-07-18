@@ -63,7 +63,7 @@ jobs:
           done
 
       - name: Generate song index
-        run: python3 scripts/build_pages_index.py songs build/pages
+        run: python3 scripts/build_pages_index.py songs build/pages --repository "$GITHUB_REPOSITORY"
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
