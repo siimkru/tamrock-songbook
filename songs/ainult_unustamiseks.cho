@@ -1,0 +1,77 @@
+{title: Ainult Unustamiseks}
+{artist: Smilers}
+{key: Em}
+{tempo: 130}
+{time: 4/4}
+{comment-vocals: Intro}
+{start_of_grid label="I" shape="4"}
+|| Em | . | . | . |
+| C5 | A5 ||
+{end_of_grid}
+{start_of_verse: label="S1"}
+[Em]Üks pisike ja pime
+[G5]Kuid tugev [A5]tunne on mu sees
+[Em]Ma nagu rongist maha
+[G5]Oleks jää[A5]nud viimasest
+[Em]Tunnen kuuma õhku
+[G5]Tunnen [A5]külma üksindust
+[C5]Kõik nagu sügis-talvel
+[A5]On ainult [B7]must ja valge
+{end_of_verse}
+{start_of_verse: label="S2"}
+[Em]Ma ei taha sõnu
+[G5]Ma ei [A5]otsi tõotusi
+[Em]Ma ei taha tõde
+[G5]See on [A5]kibedam kui viin
+[C5]Mida lo[D5]otsin leida eest
+[G5]Leidsin [Em]sinu silmadest
+[C5]Unustades valu
+[B7]Ma seisan siin ja palun
+{end_of_verse}
+{start_of_chorus: label="R"}
+[C]Vii mind [D]enda juurde [Em]täna
+Mööda [D]salajasi [C]teid
+Võta, [Bm]kasuta mind [Em]ära
+Ära [D]oota vastuseid
+[C]Seisan [D]alasti su [G]ette
+Rebin [Em]ennast ribadeks
+[C]Seda kõike ainult
+[B7]Ainult unustami[Em]seks
+{end_of_chorus}
+{start_of_verse: label="S3"}
+[Em]Kaotada või võita
+[G5]Pole ro[A5]hkem midagi
+[Em]Sest vastu panna sulle
+[G5]Ma ei su[A5]udaks nii kui nii
+[C5]Tuhat [D5]sädet on mu sees
+[G5]Ja kui [Em]ühest neist saab [C5]leek
+[C5]Unustades valu
+[B7]Ma hoian sind ja palun
+{end_of_verse}
+{chorus: label="R"}
+{comment-vocals: Vahemäng}
+{start_of_grid label="VM" shape="0+4+1"}
+|| Em | . | . | . |
+| C | . | Em | . |
+| C | . | Em | . | trummid liituvad
+| Am | . | B7 | . ||
+{end_of_grid}
+{start_of_grid label="R alt" shape="4"}
+|| C | D | Em | D |
+| C | Bm | Em | D |
+{end_of_grid}
+[C5]Seisan [D5]alasti su [G5]ette
+Rebin [Em]ennast riba[C5]deks
+[C5]Saan su lohtusse
+[B7]Ja vajun unustusse..
+{start_of_chorus: label="R"}
+[C]Vii mind [D]enda juurde [Em]täna
+Mööda [D]salajasi [C]teid
+Võta, [Bm]kasuta mind [Em]ära
+Ära [D]oota vastuseid
+[C]Seisan [D]alasti su [G]ette
+Rebin [Em]ennast ribadeks
+[C]Seda kõike ainult
+[B7]Ainult unustami[A5]seks
+{end_of_chorus}
+{comment: Outro}
