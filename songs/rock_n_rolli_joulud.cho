@@ -1,0 +1,88 @@
+{title: Rock'n'Rolli Jõulud}
+{artist: Meie Mees}
+{key: Ab}
+{tempo: 165}
+{time: 4/4}
+
+{start_of_grid label="I" shape="4"}
+|: Ab | Eb | Ab | Eb :|
+{end_of_grid}
+{comment: Jõulud! Jõulud! Jõulud!}
+
+{start_of_verse: label="S1"}
+[Ab]Valgeks saal, aeg on käes!
+Kohe pidu [Db]püsti läeb.
+[Eb]Tõstke klaase kuuse ees,
+sest on ju rock’n’rolli [Ab]jõulud need!
+
+[Ab]Mõnus taas kohtuda
+rokipeol siin [Db]sõbraga.
+Käib [Eb]ühislaul nüüd igal pool,
+kõik teavad, mida Santa toob.
+{end_of_verse}
+
+{start_of_chorus: label="R"}
+Toob jälle [Ab]rock’n’rolli j[Fm]õulud,
+taas [Db]kõlab stiilne rock’n’r[Eb]oll.
+[Db]Nahast tagi selga vea
+ning [Eb]Elvise-soenguks kammi pea.
+
+On jälle [Ab]rock’n’rolli j[Fm]õulud!
+Sa seda [Db]tead, sa pole l[Eb]oll.
+Kao [Db]välja kodust salaja
+ja [Eb]põruta siis möllama.
+{end_of_chorus}
+
+{start_of_verse: label="S2"}
+[Ab]Pidu käib koiduni,
+meri on kõigil [Db]põlvini.
+[Eb]Tõmba nüüd käima end,
+laval on rock’n’rolli [Ab]menubänd!
+
+[Ab]Naerda võid taas, pulli siin saab,
+käest kätte käib suur [Db]õlleklaas.
+[Eb]Tantsi nii, et mustab maa,
+võid olla õhtu superstaar.
+{end_of_verse}
+
+{start_of_chorus: label="R"}
+On jälle [Ab]rock’n’rolli j[Fm]õulud!
+taas [Db]kõlab stiilne muusi[Eb]ka.
+[Db]Tähtsust lõpuks pole sel’,
+et [Eb]kuulmata jääb aisakell.
+
+Käes on [Ab]rock’n’rolli j[Fm]õulud!
+Sa seda [Db]tead, sa pole [Eb]loll.
+Ka [Db]jõulutaadil tuurid on peal,
+ta [Eb]kaasa tantsib katustel.
+{end_of_chorus}
+
+{start_of_bridge: label="V"}
+Sa ainult [Fm]roki, kasvõi sokis,
+siis saad [Eb]teada, mis on kaif.
+Sa ainult [Fm]roki ja ära möki,
+nüüd [Eb]anna tuld, üks elu on vaid!
+{end_of_bridge}
+
+{start_of_verse: label="S3"}
+[Ab]Näita, et kõik sind näeks,
+jõuluaeg on [Db]kõigi jaoks!
+[Eb]Täna, nüüd ja peosaalis siin
+„Vaikset ööd” ei [Ab]tulegi!
+
+[Ab]Lumi maas, särab kuu,
+pea on saabumas [Db]aasta uus.
+[Eb]Tantsukaaslast suudle sa
+ja jõulutaadi auks las tõusta klaas!
+{end_of_verse}
+
+{chorus: label="R"}
+
+{start_of_grid label="I" shape="4"}
+|: Ab | Eb | Ab | Eb :|
+{end_of_grid}
+{comment: Jõulud! Jõulud! Jõulud!}
+
+{chorus: label="R"}
+
+On jälle rock’n’rolli jõulud!
