@@ -56,7 +56,8 @@ Rebin [Em]ennast ribadeks
 | C | . | Em | . | trummid liituvad
 | Am | . | B7 | . ||
 {end_of_grid}
-{start_of_grid label="R alt" shape="4"}
+{comment: Refrääni alternatiivne variant}
+{start_of_grid label="R" shape="4"}
 || C | D | Em | D |
 | C | Bm | Em | D |
 {end_of_grid}
