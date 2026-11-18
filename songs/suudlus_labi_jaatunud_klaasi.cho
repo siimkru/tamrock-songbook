@@ -1,0 +1,58 @@
+{title: Suudlus läbi jäätunud klaasi}
+{artist: Ruja}
+{composer: Rein Rannap}
+{lyricist: Ott Arder}
+{key: A}
+{time: 12/8}
+{tempo: 140}
+
+{comment-vocals: Intro}
+{start_of_grid label="I" shape="8"}
+|| A . | A/G . | D/F# . | Dm/F . |
+| A/E . | E . | A . | . . ||
+{end_of_grid}
+
+{start_of_chorus: label="R"}
+Hetke [A]vaid mõni mälestus [E/G#]kestab,
+kuid on [F#m]neid, mida minna ei [C#m/E]lasta.
+Küllap [D]siis on meil väga neid [A/C#]vaja,
+sest nad leiavad [B]aja, külastavad meid [E]taas.
+
+Hetke [A]vaid mõni mälestus [E/G#]kestab,
+kuid on [F#m]neid, mida minna ei [C#m/E]lasta.
+Küllap [D]siis meie vajame [A]neid,
+sest nad tulevad [B]taas,[E] kas Sa ootad või [A]ei. [D] [A]
+{end_of_chorus}
+
+{start_of_verse: label="S1"}
+Sajab akna taga [A]laia valget lund veel õhtu [D]eel.
+Ja ma äkki läbi [B]jäätunud klaasi siis Su silmi [E]näen.
+Sina surud vastu [A]külma klaasi su[A7]u ja mina [D]ka. [Dm]
+Ja jäälilled kõik me [A/C#]aknaklaasil si[E]is sula[A]vad.
+{end_of_verse}
+
+{chorus: label="R"}
+
+{start_of_verse: label="S2"}
+Sellest päevast saab nüüd [A]õige mitu lund ja muudki [D]veel.
+Tundub nagu oleks [B]toona näinud und ma õhtu [E]eel.
+Nüüd mu akna taga [A]ulub jäine tu[A7]ul ja kurb on [D]meel, [Dm]
+kuigi aken on just [A/C#]nõnda nagu si[E]is lille[A]des.
+{end_of_verse}
+
+{comment-vocals: Vahemäng}
+{start_of_grid label="VM" shape="8"}
+|| A . | E/G# . | F#m . | C#m/E . |
+| D . | A/C# . | B . | E . |
+| A . | E/G# . | F#m . | C#m/E . |
+| D . | A . | B E | A D |
+| A . ||
+{end_of_grid}
+
+{start_of_verse: label="S3"}
+Sajab akna taga [A]laia valget lund veel õhtu [D]eel.
+Ja ma äkki läbi [B]jäätunud klaasi siis Su silmi [E]näen.
+Sina surud vastu [A]külma klaasi su[A7]u ja mina [D]ka. [Dm]
+Ja jäälilled kõik me [A/C#]aknaklaasil si[E]is sula[A]vad. [Dm]
+Ja jäälilled kõik me [A/C#]aknaklaasil si[E]is sula[A]vad.
+{end_of_verse}
