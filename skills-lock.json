@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "chordpro": {
+      "source": "daviddwlee84/agent-skills",
+      "commit": "a7aca29156c4098ee9cbc7ec70f700d2bd1f32da",
+      "sourceType": "github",
+      "skillPath": "skills/local/chordpro/SKILL.md",
+      "computedHash": "e0da72e3fdf272cad998e0f0bd5d2610925263a3af26f7ed39e76bede813dbb8"
+    }
+  }
+}
